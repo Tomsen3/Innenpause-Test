@@ -1,0 +1,64 @@
+{
+    "appVersion":  "3.7",
+    "released":  "2026-05-05",
+    "updates":  [
+                    {
+                        "version":  "3.7",
+                        "changelog":  [
+                                          "Hilfe an die neue App-Struktur mit Heute, Mehr, Halt finden, Uebungen und Einstellungen angepasst",
+                                          "Sicherungsdatei, seltene Aktionen und technische Hinweise in der Hilfe ruhiger beschrieben",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "3.6",
+                        "changelog":  [
+                                          "Mobile Ansicht fuer Header, Heute, Halt finden, Uebungen und Einstellungen nachjustiert",
+                                          "Halt finden alltagssprachlicher formuliert und Notiz-Vorschau verstaendlicher gemacht",
+                                          "Sicherungsdatei- und Einstellungsbereiche ruhiger und weniger technisch beschrieben",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "3.5",
+                        "changelog":  [
+                                          "Check-in-Punkt Verbundenheit mit erklaerender Frage ergaenzt",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "3.4",
+                        "changelog":  [
+                                          "App startet bei jedem neuen Öffnen wieder im Heute-Reiter",
+                                          "Reiterwechsel während der Nutzung bleibt weiterhin erhalten"
+                                      ]
+                    },
+                    {
+                        "version":  "3.3",
+                        "changelog":  [
+                                          "Header auf Smartphone und Desktop klarer abgesetzt",
+                                          "Mobiles Header-Layout entzerrt und Begruessung auf zwei Zeilen verteilt",
+                                          "Tagesimpuls im Kopfbereich besser lesbar skaliert"
+                                      ]
+                    },
+                    {
+                        "version":  "3.2",
+                        "changelog":  [
+                                          "Header farblich klarer vom App-Inhalt abgesetzt",
+                                          "Check-ins erscheinen erst ab den eingestellten Tageszeiten",
+                                          "Tagesimpulse bleiben beim Sprachwechsel Deutsch/Englisch synchron",
+                                          "Ladeproblem im Tagesfortschritt behoben",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "3.1",
+                        "changelog":  [
+                                          "Service Worker bereinigt nur noch eigene Innenpause-Caches",
+                                          "Versionsanzeige zeigt installierte, geladene und online verfuegbare Version klarer an",
+                                          "Backup-Erinnerung fuer lokale Daten verbessert",
+                                          "Changelog fuer technische Stabilitaetsupdates erweitert"
+                                      ]
+                    }
+                ]
+}
