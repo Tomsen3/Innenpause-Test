@@ -129,7 +129,7 @@
         <button class="moment-option" onclick="momentAuswahlAktion('spueren')"><span>♡</span><strong>Kurz<br>spüren</strong></button>
         <button class="moment-option" onclick="momentAuswahlAktion('schreiben')"><span>✎</span><strong>Etwas<br>aufschreiben</strong></button>
         <button class="moment-option" onclick="momentAuswahlAktion('uebung')"><span>♧</span><strong>Freie Übung<br>wählen</strong></button>
-        <button class="moment-option moment-option-halt" onclick="momentAuswahlAktion('halt')"><span>♢</span><strong>Halt<br>finden</strong></button>
+        <button class="moment-option moment-option-halt" onclick="momentAuswahlAktion('halt')"><span><img class="moment-halt-icon-img" src="assets/herz_haende_moment_v2.svg" alt=""></span><strong>Halt<br>finden</strong></button>
       </div>
     </div>
 
@@ -817,7 +817,7 @@
 // ============================================================
 // APP VERSION
 // ============================================================
-const BUNDLED_APP_VERSION = '3.7';
+const BUNDLED_APP_VERSION = '4.9';
 let APP_VERSION = BUNDLED_APP_VERSION;
 let VERSION_UPDATES = [];
 let VERSION_JSON_STATUS = { ok: false, quelle: 'fallback', meldung: 'Noch nicht geladen', geladenAm: null };
@@ -1622,9 +1622,7 @@ function getTagesimpuls() {
 }
 
 function ladeImpuls() {
-  const impuls = SPRACHE === 'en'
-    ? { text: 'You cannot stop the waves, but you can learn to surf them.', kategorie: 'Serenity' }
-    : { text: 'Du kannst die Wellen nicht stoppen, aber du kannst lernen, auf ihnen zu surfen.', kategorie: 'Gelassenheit' };
+  const impuls = getTagesimpuls();
   document.getElementById('impuls-text').textContent = impuls.text;
   document.getElementById('impuls-kategorie').textContent = impuls.kategorie;
   document.querySelector('.impuls-label') && (document.querySelector('.impuls-label').textContent = t('impuls_label'));
@@ -3300,10 +3298,16 @@ function ladeStreak() {
 
   const emoji = '🔥';
   const text = SPRACHE === 'en' ? 'Days in a row' : 'Tage am Stück';
+  const flammenLevel = Math.min(10, Math.max(0, streak));
+  const flammenSkala = (0.72 + Math.min(flammenLevel, 7) * 0.07 + Math.max(0, flammenLevel - 7) * 0.03).toFixed(2);
+  const flammenKlasse = streak >= 30 ? 'streak-feuer streak-feuer-max'
+    : streak >= 14 ? 'streak-feuer streak-feuer-hot'
+    : streak >= 7 ? 'streak-feuer streak-feuer-warm'
+    : 'streak-feuer';
 
   c.innerHTML = `
     <div class="streak-bar">
-      <div class="streak-feuer">${emoji}</div>
+      <div class="${flammenKlasse}" style="--streak-scale:${flammenSkala}" title="${streakAnzeige}${streakEinheit}">${emoji}</div>
       <div class="streak-text">
         <div class="streak-zahl" data-unit="${streakEinheit}">${streakAnzeige}</div>
         <div class="streak-label">${text}</div>
@@ -3481,6 +3485,13 @@ function ladeVorschlaege() {
     const titelEsc = u ? escapeHtml(u.titel) : '';
 
     if (isAktiv && u) {
+      const kurzBeschreibung = (u.beschreibung || '').split(/[.!?]/)[0].trim();
+      const dauerText = SPRACHE === 'en'
+        ? `${u.dauer_minuten || 3} minutes`
+        : `${u.dauer_minuten || 3} Minuten`;
+      const sublineText = kurzBeschreibung
+        ? `${dauerText} · ${kurzBeschreibung}`
+        : dauerText;
       const statusHTML = istErledigt
         ? `<div class="uebung-jetzt-status done">
              <span class="uebung-jetzt-status-mark">✓</span>
@@ -3499,6 +3510,7 @@ function ladeVorschlaege() {
         <div class="uebung-jetzt-card${istErledigt ? ' uebung-jetzt-done' : ''}">
           <div class="uebung-jetzt-label">${label} ${t('uebung_jetzt_label')}</div>
           <div class="uebung-jetzt-titel">${u.titel}</div>
+          <div class="uebung-jetzt-subline">${escapeHtml(sublineText)}</div>
           <div class="uebung-jetzt-meta">
             <span class="badge badge-kat" data-kat="${katAnzeige(u.kategorie)}">${katAnzeige(u.kategorie)}</span>
             <span>⏱ ${u.dauer_minuten} Min</span>
@@ -4698,13 +4710,13 @@ function initialisiereSprache() {
         ['♡', 'Pause<br>briefly'],
         ['✎', 'Write<br>a little'],
         ['♧', 'Choose free<br>practice'],
-        ['♢', 'Find<br>support']
+        ['<img class="moment-halt-icon-img" src="assets/herz_haende_moment_v2.svg" alt="">', 'Find<br>support']
       ]
     : [
         ['♡', 'Kurz<br>spüren'],
         ['✎', 'Etwas<br>aufschreiben'],
         ['♧', 'Freie Übung<br>wählen'],
-        ['♢', 'Halt<br>finden']
+        ['<img class="moment-halt-icon-img" src="assets/herz_haende_moment_v2.svg" alt="">', 'Halt<br>finden']
       ];
   momentOptionen.forEach((btn, i) => {
     if (!momentLabels[i]) return;
@@ -4894,7 +4906,7 @@ function initialisiereSprache() {
   // Lizenz-Label im Einstellungen-Tab (dynamisch eingefügt)
   const lizenzLabel = document.querySelector('#content-einstellungen .setting-label:last-of-type');
   const spracheHTML = `
-    <div class="setting-row">
+    <div class="setting-row" id="setting-row-sprache">
       <div>
         <div class="setting-label">${t('einst_sprache')}</div>
         <div class="setting-sub">${t('einst_sprache_sub')}</div>
@@ -4905,7 +4917,7 @@ function initialisiereSprache() {
       </div>
     </div>`;
 
-  if (lizenzLabel) {
+  if (lizenzLabel && !document.getElementById('setting-row-sprache')) {
     lizenzLabel.insertAdjacentHTML('beforebegin', spracheHTML);
   }
 

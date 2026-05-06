@@ -1,6 +1,6 @@
-// sw.js - stabilisierte Version (v3.7)
+// sw.js - stabilisierte Version (v4.9)
 
-const CACHE_NAME = 'innenpause-v3-7';
+const CACHE_NAME = 'innenpause-v4-9';
 const CACHE_PREFIX = 'innenpause-';
 
 const SHELL = [
@@ -11,7 +11,10 @@ const SHELL = [
   './js/pdf-export.js',
   './version.json',
   './data/bausteine.json',
-  './data/hilfe.json'
+  './data/hilfe.json',
+  './assets/meditationsfigur.svg',
+  './herz_haende_exakt.svg',
+  './assets/herz_haende_moment_v2.svg'
 ];
 
 // INSTALL

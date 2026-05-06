@@ -1,7 +1,99 @@
 {
-    "appVersion":  "3.7",
-    "released":  "2026-05-05",
+    "appVersion":  "4.9",
+    "released":  "2026-05-06",
     "updates":  [
+                    {
+                        "version":  "4.9",
+                        "changelog":  [
+                                          "Anfuehrungszeichen im Tagesimpuls-Kreis optisch zentriert",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "4.8",
+                        "changelog":  [
+                                          "Halt-finden-Icon in der Moment-Auswahl als echtes Bild-Icon statt CSS-Background gerendert",
+                                          "Funktion des Moment-Halt-Buttons unveraendert beibehalten",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "4.7",
+                        "changelog":  [
+                                          "Halt-finden-Icon fuer die Moment-Auswahl als versioniertes, eng zugeschnittenes SVG eingebunden",
+                                          "Asset-Cache fuer das kleine Icon umgangen und Linienstaerke klarer gesetzt",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "4.6",
+                        "changelog":  [
+                                          "Neu bearbeitetes Herz-Haende-SVG direkt in Header und Moment-Auswahl verwendet",
+                                          "PNG-Zwischenloesung fuer die Moment-Auswahl ersetzt",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "4.5",
+                        "changelog":  [
+                                          "Halt-finden-Icon in der Moment-Auswahl aus der sauberen Header-Grafik zugeschnitten und klarer eingebunden",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "4.4",
+                        "changelog":  [
+                                          "Halt-finden-Icon in der Moment-Auswahl deutlicher gezoomt und kontrastreicher dargestellt",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "4.3",
+                        "changelog":  [
+                                          "Halt-finden-Icon in der Moment-Auswahl klarer und groesser dargestellt",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "4.2",
+                        "changelog":  [
+                                          "Halt-finden-Icon mit dem gelieferten Herz-Haende-SVG vereinheitlicht",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "4.1",
+                        "changelog":  [
+                                          "Hochgeladenes Meditationsfigur-SVG pixelgenau in der Moment-Karte eingebunden",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "4.0",
+                        "changelog":  [
+                                          "Fuer jetzt empfohlen wieder als schmale kompakte Empfehlungszeile gestaltet",
+                                          "Echte Uebungstitel bleiben sichtbar, lange Details wandern aus der kompakten Zeile",
+                                          "Meditationsfigur in der Moment-Karte an das Mockup angepasst",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "3.9",
+                        "changelog":  [
+                                          "Streak-Flamme waechst sichtbar mit zunehmender Dauer",
+                                          "Sprachumschaltung wieder sichtbar und konsistent nutzbar gemacht",
+                                          "Hilfe in Inhalt und Look an die neue Innenpause-Struktur angepasst",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "3.8",
+                        "changelog":  [
+                                          "Tagesimpuls wieder an den taeglich wechselnden Impuls-Pool angeschlossen",
+                                          "Aktuelle Uebung zeigt wieder den echten Vorschlag aus der Tageszeit- und Rotationslogik",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
                     {
                         "version":  "3.7",
                         "changelog":  [
