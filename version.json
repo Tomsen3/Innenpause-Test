@@ -1,7 +1,16 @@
 {
-    "appVersion":  "6.1.1",
+    "appVersion":  "6.1.2",
     "released":  "2026-05-06",
     "updates":  [
+                    {
+                        "version":  "6.1.2",
+                        "changelog":  [
+                                          "Mehr-dazu-Button der Abendreflexion oeffnet wieder den Tagesabschluss",
+                                          "Tagesimpuls wird mobil vollstaendig angezeigt",
+                                          "Heutige Uebungen sind auf der Heute-Seite als Akkordeon einklappbar",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
                     {
                         "version":  "6.1.1",
                         "changelog":  [

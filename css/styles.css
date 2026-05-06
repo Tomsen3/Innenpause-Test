@@ -7298,3 +7298,83 @@ body {
     display: none !important;
   }
 }
+
+#content-heute.abend-reflexion-open .mock-abend-card ~ .abschluss-section-label {
+  display: block !important;
+  grid-column: 1 / -1 !important;
+  margin: -8px 0 0 !important;
+  padding: 0 0 10px 22px !important;
+}
+
+#content-heute.abend-reflexion-open #abschluss-card {
+  display: block !important;
+  grid-column: 1 / -1 !important;
+  margin: 0 0 24px !important;
+  padding: 20px 22px !important;
+}
+
+.heutige-uebungen-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.heutige-uebungen-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(45, 99, 62, 0.09);
+  color: var(--accent);
+  font-size: 24px;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+#content-heute.heutige-uebungen-open .heutige-uebungen-arrow {
+  transform: rotate(90deg);
+}
+
+#content-heute.has-done-exercises .mock-abend-card ~ #heute-uebungen-container {
+  display: none !important;
+}
+
+#content-heute.has-done-exercises.heutige-uebungen-open .mock-abend-card ~ #heute-uebungen-container {
+  display: block !important;
+}
+
+@media (max-width: 700px) {
+  .impuls-card {
+    height: auto !important;
+    min-height: 118px !important;
+    align-items: center !important;
+  }
+
+  .impuls-text {
+    max-height: none !important;
+    overflow: visible !important;
+    line-height: 1.28 !important;
+  }
+}
+
+@media (max-width: 380px), (max-height: 760px) {
+  .impuls-card {
+    height: auto !important;
+    min-height: 112px !important;
+  }
+
+  .impuls-kategorie {
+    display: block !important;
+  }
+}
