@@ -7378,3 +7378,113 @@ body {
     display: block !important;
   }
 }
+
+.klang-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 34px;
+  max-width: 104px;
+  padding: 5px 9px;
+  border: 1px solid rgba(45, 99, 62, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.56);
+  color: #2d633e;
+  box-shadow: 0 7px 18px rgba(45, 61, 45, 0.08);
+  cursor: pointer;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.1;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.klang-toggle-btn.active {
+  background: linear-gradient(180deg, #3a784f, #2d633e);
+  border-color: rgba(45, 99, 62, 0.42);
+  color: #fffaf3;
+  box-shadow: 0 8px 18px rgba(45, 99, 62, 0.22);
+}
+
+.klang-toggle-btn span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#klang-toggle-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: rgba(45, 99, 62, 0.10);
+  font-size: 15px;
+  line-height: 1;
+}
+
+.klang-toggle-btn.active #klang-toggle-icon {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.klang-settings-card {
+  display: block;
+}
+
+.klang-intervall-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  min-width: 92px;
+}
+
+.klang-intervall-control input {
+  width: 66px;
+  text-align: center;
+}
+
+.klang-settings-actions {
+  margin-top: 10px;
+}
+
+.klang-hinweis {
+  margin-top: 8px;
+  line-height: 1.45;
+}
+
+@media (max-width: 700px) {
+  .header-tools {
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+  }
+
+  .klang-toggle-btn {
+    width: 42px !important;
+    min-width: 42px !important;
+    max-width: 42px !important;
+    min-height: 52px !important;
+    padding: 5px 3px !important;
+    flex-direction: column !important;
+    gap: 3px !important;
+    border-radius: 15px !important;
+    font-size: 10px !important;
+  }
+
+  #klang-toggle-icon {
+    width: 25px !important;
+    height: 25px !important;
+    font-size: 15px !important;
+  }
+
+  #klang-toggle-label {
+    max-width: 38px;
+    white-space: normal;
+    line-height: 1.05;
+  }
+
+  .klang-settings-card .setting-row {
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
