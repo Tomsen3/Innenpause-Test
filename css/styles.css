@@ -7607,3 +7607,137 @@ body {
     line-height: 1.05;
   }
 }
+
+.mock-header-top {
+  align-items: flex-start !important;
+}
+
+.app-titel-bereich {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+}
+
+.app-logo-mark {
+  flex: 0 0 auto !important;
+}
+
+.header-tools {
+  display: grid !important;
+  grid-template-columns: 72px 72px !important;
+  grid-template-rows: auto auto !important;
+  align-items: start !important;
+  justify-content: end !important;
+  gap: 8px 14px !important;
+}
+
+.header-tools .header-halt-btn {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+}
+
+.header-tools .hilfe-btn {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+}
+
+.header-tools .klang-toggle-btn {
+  grid-column: 2 !important;
+  grid-row: 2 !important;
+  justify-self: center !important;
+}
+
+@media (max-width: 700px) {
+  .mock-header-top {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .app-titel-bereich {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    gap: 8px !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .app-logo-mark {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    font-size: 0 !important;
+    transform: none !important;
+  }
+
+  .app-logo-mark::before {
+    content: "♧" !important;
+    font-size: 32px !important;
+    color: #7fa071 !important;
+    line-height: 1 !important;
+  }
+
+  #app-titel-anzeige {
+    font-size: 27px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  .header-meta {
+    flex: 0 0 auto !important;
+  }
+
+  .header-tools {
+    grid-template-columns: 48px 48px !important;
+    gap: 4px 10px !important;
+    min-width: 106px !important;
+  }
+
+  .header-halt-btn,
+  .hilfe-btn {
+    width: 48px !important;
+    min-height: 64px !important;
+    gap: 5px !important;
+    font-size: 11px !important;
+  }
+
+  .header-tool-icon,
+  .hilfe-btn::before {
+    width: 42px !important;
+    height: 42px !important;
+    font-size: 23px !important;
+  }
+
+  .header-halt-icon-img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .hilfe-btn::after {
+    font-size: 11px !important;
+  }
+
+  .header-tools .klang-toggle-btn {
+    width: 44px !important;
+    min-width: 44px !important;
+    max-width: 44px !important;
+    min-height: 38px !important;
+    padding: 4px 2px !important;
+    border-radius: 14px !important;
+    font-size: 9px !important;
+  }
+
+  .header-tools #klang-toggle-icon {
+    width: 18px !important;
+    height: 18px !important;
+    font-size: 12px !important;
+  }
+
+  .header-tools #klang-toggle-label {
+    max-width: 38px !important;
+    white-space: normal !important;
+    line-height: 1.05 !important;
+  }
+}

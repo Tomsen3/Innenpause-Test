@@ -1,7 +1,15 @@
 {
-    "appVersion":  "6.1.5",
+    "appVersion":  "6.1.6",
     "released":  "2026-05-06",
     "updates":  [
+                    {
+                        "version":  "6.1.6",
+                        "changelog":  [
+                                          "Header mobil neu ausgerichtet: Blatt, Titel, Halt finden und Hilfe wieder in einer Zeile",
+                                          "Klang-Schalter kompakt unter Hilfe platziert",
+                                          "Blatt-Icon im Header wieder normal gross dargestellt"
+                                      ]
+                    },
                     {
                         "version":  "6.1.5",
                         "changelog":  [
