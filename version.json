@@ -1,7 +1,37 @@
 {
-    "appVersion":  "5.1",
+    "appVersion":  "5.5",
     "released":  "2026-05-06",
     "updates":  [
+                    {
+                        "version":  "5.5",
+                        "changelog":  [
+                                          "Tagesfortschritt auf Smartphones noch knapper als Kreis-Text-Zeile gesetzt",
+                                          "Ueberlagerung im unteren Heute-Bereich weiter reduziert"
+                                      ]
+                    },
+                    {
+                        "version":  "5.4",
+                        "changelog":  [
+                                          "Tagesfortschritt mobil als kompakte Zeile ohne Ueberlagerung gesetzt",
+                                          "Untere Heute-Karten in der Smartphone-Ansicht weiter stabilisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "5.3",
+                        "changelog":  [
+                                          "Mobile Empfehlungszeile, Tagesfortschritt, Serie und Abendreflexion weiter verdichtet",
+                                          "Start-Button der empfohlenen Uebung mobil ohne doppelten Text dargestellt",
+                                          "Mobile Tagesfortschritt-Karte gegen Textueberlagerungen stabilisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "5.2",
+                        "changelog":  [
+                                          "Mobile Heute-Ansicht weiter verdichtet und staerker zeilenorientiert",
+                                          "Moment-Auswahl, Fortschritt, Serie, Reflexion und Tabbar mobil deutlich verkleinert",
+                                          "Halt-finden-Icon im Header robuster als echtes Bild-Icon eingebunden"
+                                      ]
+                    },
                     {
                         "version":  "5.1",
                         "changelog":  [

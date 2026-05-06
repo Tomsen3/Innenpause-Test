@@ -6308,3 +6308,521 @@ body {
     height: 34px !important;
   }
 }
+
+/* Final compact phone pass: row-oriented cards and visible full impulse image. */
+.header-halt-btn .header-tool-icon::before {
+  content: none !important;
+  display: none !important;
+}
+
+.header-halt-icon-img {
+  width: 38px !important;
+  height: 38px !important;
+  display: block !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 700px) {
+  #impuls-header {
+    padding: 14px 14px 6px !important;
+  }
+
+  .mock-header-top {
+    margin-bottom: 18px !important;
+  }
+
+  #app-titel-anzeige {
+    font-size: 29px !important;
+  }
+
+  .app-logo-mark {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .header-halt-btn,
+  .hilfe-btn {
+    width: 46px !important;
+    min-height: 58px !important;
+    font-size: 10px !important;
+    gap: 4px !important;
+  }
+
+  .header-tool-icon,
+  .hilfe-btn::before {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .header-halt-icon-img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .hilfe-btn::before {
+    font-size: 21px !important;
+  }
+
+  .hilfe-btn::after {
+    font-size: 10px !important;
+  }
+
+  .header-greeting {
+    margin-bottom: 14px !important;
+  }
+
+  .header-greeting-main {
+    font-size: 16px !important;
+  }
+
+  .header-sun-emoji {
+    font-size: 21px !important;
+  }
+
+  .header-greeting-title {
+    max-width: 10em !important;
+    font-size: 29px !important;
+    line-height: 1.05 !important;
+  }
+
+  .impuls-card {
+    min-height: 116px !important;
+    grid-template-columns: 34px minmax(0, 1fr) 36% !important;
+    gap: 8px !important;
+    padding: 10px !important;
+  }
+
+  .impuls-landscape {
+    display: block !important;
+    grid-column: 3 !important;
+    grid-row: 1 / span 2 !important;
+    align-self: stretch !important;
+    min-height: 96px !important;
+    height: 100% !important;
+    margin: -10px -10px -10px 0 !important;
+    border-radius: 0 14px 14px 0 !important;
+    background:
+      linear-gradient(90deg, rgba(246,248,239,0.92) 0%, rgba(246,248,239,0.22) 34%, rgba(246,248,239,0) 58%),
+      url("../assets/tagesimpuls-bg.png") center / contain no-repeat !important;
+    background-color: #edf3e8 !important;
+    clip-path: none !important;
+  }
+
+  .impuls-quote-mark {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .impuls-label {
+    margin-bottom: 5px !important;
+    font-size: 15px !important;
+  }
+
+  .impuls-text {
+    font-size: 13px !important;
+    line-height: 1.28 !important;
+  }
+
+  .impuls-kategorie {
+    margin-top: 6px !important;
+    font-size: 11px !important;
+  }
+
+  .heute-einstieg-card {
+    margin: 12px 0 12px !important;
+    padding: 12px !important;
+    border-radius: 14px !important;
+  }
+
+  .moment-card-main {
+    grid-template-columns: 40px minmax(0, 1fr) 16px !important;
+    gap: 10px !important;
+  }
+
+  .moment-card-icon {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .moment-card-icon::before {
+    width: 27px !important;
+    height: 30px !important;
+  }
+
+  .heute-einstieg-title {
+    font-size: 18px !important;
+    line-height: 1.08 !important;
+  }
+
+  .moment-card-sub {
+    margin-top: 2px !important;
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+  }
+
+  .moment-card-arrow {
+    font-size: 30px !important;
+  }
+
+  .moment-auswahl,
+  .moment-auswahl.open {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    margin-top: 12px !important;
+  }
+
+  .moment-option {
+    min-height: 48px !important;
+    padding: 7px 10px !important;
+    display: grid !important;
+    grid-template-columns: 34px minmax(0, 1fr) !important;
+    align-items: center !important;
+    justify-content: stretch !important;
+    gap: 10px !important;
+    text-align: left !important;
+    font-size: 14px !important;
+    border-radius: 12px !important;
+  }
+
+  .moment-option span {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .moment-option span::before {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 22px !important;
+  }
+
+  .moment-option strong {
+    width: auto !important;
+    text-align: left !important;
+    line-height: 1.15 !important;
+  }
+
+  .moment-halt-icon-img {
+    width: 27px !important;
+    height: 25px !important;
+  }
+
+  .uebung-jetzt-card {
+    min-height: 62px !important;
+    padding: 9px 10px 9px 62px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .uebung-jetzt-titel {
+    font-size: 15px !important;
+  }
+
+  .uebung-jetzt-subline {
+    font-size: 11px !important;
+  }
+
+  .uebung-jetzt-actions .btn-primary {
+    min-width: 70px !important;
+    min-height: 34px !important;
+    padding: 0 10px !important;
+    font-size: 13px !important;
+  }
+
+  .tagesfortschritt-card,
+  .streak-bar,
+  .mock-abend-card {
+    min-height: 78px !important;
+    height: auto !important;
+    margin: 0 0 12px !important;
+    padding: 12px !important;
+    border-radius: 14px !important;
+  }
+
+  .tagesfortschritt-card {
+    display: grid !important;
+    grid-template-columns: 56px minmax(0, 1fr) !important;
+    gap: 12px !important;
+    align-items: center !important;
+  }
+
+  .tagesfortschritt-title,
+  .streak-label {
+    font-size: 15px !important;
+  }
+
+  .tagesfortschritt-bar {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .tagesfortschritt-bar::after {
+    inset: 7px !important;
+    font-size: 13px !important;
+  }
+
+  .tagesfortschritt-sub {
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+  }
+
+  .streak-bar {
+    display: grid !important;
+    grid-template-columns: 50px minmax(0, 1fr) 20px !important;
+    gap: 12px !important;
+    align-items: center !important;
+  }
+
+  .streak-feuer {
+    width: 44px !important;
+    height: 44px !important;
+    font-size: calc(18px * var(--streak-scale)) !important;
+  }
+
+  .streak-zahl {
+    font-size: 26px !important;
+  }
+
+  .streak-text::after {
+    font-size: 13px !important;
+  }
+
+  .streak-bar::after {
+    font-size: 32px !important;
+  }
+
+  .mock-abend-card {
+    grid-template-columns: 46px minmax(0, 1fr) auto !important;
+    gap: 12px !important;
+    align-items: center !important;
+  }
+
+  .mock-abend-icon {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .mock-abend-copy strong {
+    font-size: 18px !important;
+    line-height: 1.12 !important;
+  }
+
+  .mock-abend-copy span {
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+  }
+
+  .mock-abend-card button {
+    min-height: 34px !important;
+    padding: 0 12px !important;
+    border-radius: 12px !important;
+    font-size: 13px !important;
+  }
+
+  #tab-bar {
+    width: calc(100% - 22px) !important;
+    padding: 4px !important;
+    border-radius: 20px !important;
+  }
+
+  .tab-btn {
+    min-height: 48px !important;
+    border-radius: 16px !important;
+    font-size: 11px !important;
+    gap: 2px !important;
+  }
+
+  .tab-icon {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .impuls-card {
+    grid-template-columns: 30px minmax(0, 1fr) 33% !important;
+  }
+
+  .impuls-text {
+    font-size: 12px !important;
+  }
+
+  .moment-option {
+    min-height: 44px !important;
+  }
+}
+
+/* Final phone repair: keep lower content compact without text collisions. */
+@media (max-width: 700px) {
+  .uebung-jetzt-card {
+    display: grid !important;
+    grid-template-columns: 34px minmax(0, 1fr) auto !important;
+    grid-template-areas:
+      "icon title actions"
+      "icon sub actions" !important;
+    column-gap: 10px !important;
+    row-gap: 2px !important;
+    align-items: center !important;
+    min-height: 54px !important;
+    padding: 8px 10px !important;
+    margin: 0 0 10px !important;
+  }
+
+  .uebung-jetzt-card::after {
+    grid-area: icon !important;
+    position: static !important;
+    transform: none !important;
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 22px !important;
+  }
+
+  .uebung-jetzt-label,
+  .uebung-jetzt-meta,
+  .uebung-jetzt-desc,
+  .smart-hinweis {
+    display: none !important;
+  }
+
+  .uebung-jetzt-titel {
+    grid-area: title !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    font-size: 14px !important;
+    line-height: 1.15 !important;
+  }
+
+  .uebung-jetzt-subline {
+    grid-area: sub !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    font-size: 11px !important;
+    line-height: 1.15 !important;
+  }
+
+  .uebung-jetzt-actions {
+    grid-area: actions !important;
+    justify-self: end !important;
+    display: flex !important;
+    margin: 0 !important;
+  }
+
+  .uebung-jetzt-actions .btn-secondary {
+    display: none !important;
+  }
+
+  .uebung-jetzt-actions .btn-primary {
+    width: auto !important;
+    min-width: 74px !important;
+    min-height: 34px !important;
+    padding: 0 12px !important;
+    font-size: 0 !important;
+    line-height: 1 !important;
+  }
+
+  .uebung-jetzt-actions .btn-primary::before {
+    content: "Starten" !important;
+    font-size: 13px !important;
+  }
+
+  .tagesfortschritt-card {
+    grid-template-columns: 48px minmax(0, 1fr) !important;
+    grid-template-areas:
+      "title title"
+      "bar sub" !important;
+    row-gap: 8px !important;
+    column-gap: 12px !important;
+    align-items: center !important;
+    min-height: 74px !important;
+  }
+
+  .tagesfortschritt-title {
+    grid-area: title !important;
+    line-height: 1.12 !important;
+  }
+
+  .tagesfortschritt-count {
+    display: none !important;
+  }
+
+  .tagesfortschritt-bar {
+    grid-area: bar !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .tagesfortschritt-sub {
+    grid-area: sub !important;
+    font-size: 12px !important;
+    line-height: 1.22 !important;
+  }
+
+  .streak-bar {
+    min-height: 74px !important;
+    padding: 12px !important;
+  }
+
+  .streak-feuer {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .mock-abend-card {
+    min-height: 72px !important;
+    padding: 12px !important;
+  }
+
+  .mock-abend-copy strong {
+    font-size: 16px !important;
+  }
+
+  .mock-abend-card button {
+    min-width: 0 !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .tagesfortschritt-card {
+    grid-template-columns: 44px minmax(0, 1fr) !important;
+    grid-template-areas:
+      "bar sub" !important;
+    row-gap: 2px !important;
+    column-gap: 10px !important;
+    min-height: 64px !important;
+    overflow: hidden !important;
+  }
+
+  .tagesfortschritt-head {
+    display: contents !important;
+  }
+
+  .tagesfortschritt-title {
+    display: none !important;
+  }
+
+  .tagesfortschritt-bar {
+    grid-area: bar !important;
+    align-self: center !important;
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .tagesfortschritt-bar::after {
+    inset: 7px !important;
+    font-size: 12px !important;
+  }
+
+  .tagesfortschritt-sub {
+    grid-area: sub !important;
+    align-self: center !important;
+    margin: 0 !important;
+    font-size: 12px !important;
+    line-height: 1.25 !important;
+    max-height: 2.5em !important;
+    overflow: hidden !important;
+  }
+}

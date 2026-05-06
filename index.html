@@ -65,7 +65,7 @@
     <div class="header-meta">
       <div class="header-tools">
         <button class="header-halt-btn" onclick="zeigeTab('halt')" title="Halt finden">
-          <span class="header-tool-icon" aria-hidden="true">♧</span>
+          <span class="header-tool-icon" aria-hidden="true"><img class="header-halt-icon-img" src="herz_haende_exakt.svg" alt=""></span>
           <span>Halt finden</span>
         </button>
         <button class="hilfe-btn" onclick="oeffneHilfe()" title="Hilfe">
@@ -817,7 +817,7 @@
 // ============================================================
 // APP VERSION
 // ============================================================
-const BUNDLED_APP_VERSION = '5.1';
+const BUNDLED_APP_VERSION = '5.5';
 let APP_VERSION = BUNDLED_APP_VERSION;
 let VERSION_UPDATES = [];
 let VERSION_JSON_STATUS = { ok: false, quelle: 'fallback', meldung: 'Noch nicht geladen', geladenAm: null };
@@ -4699,7 +4699,7 @@ function initialisiereSprache() {
   if (heuteHaltLink) heuteHaltLink.textContent = t('heute_halt_link');
   const headerHalt = document.querySelector('.header-halt-btn');
   if (headerHalt) {
-    headerHalt.innerHTML = `<span class="header-tool-icon" aria-hidden="true"></span><span>${t('tab_halt')}</span>`;
+    headerHalt.innerHTML = `<span class="header-tool-icon" aria-hidden="true"><img class="header-halt-icon-img" src="herz_haende_exakt.svg" alt=""></span><span>${t('tab_halt')}</span>`;
     headerHalt.title = t('tab_halt');
   }
   const momentTitel = document.querySelector('.moment-auswahl-title');
