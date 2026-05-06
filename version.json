@@ -1,7 +1,36 @@
 {
-    "appVersion":  "5.5",
+    "appVersion":  "5.9",
     "released":  "2026-05-06",
     "updates":  [
+                    {
+                        "version":  "5.9",
+                        "changelog":  [
+                                          "Mobile Streak-Karte auf Flamme und Tage-Zahl reduziert",
+                                          "Streak-Zusatztext in der engen Dashboard-Ansicht ausgeblendet"
+                                      ]
+                    },
+                    {
+                        "version":  "5.8",
+                        "changelog":  [
+                                          "Mobile Serien-Karte ohne alte Pseudobeschriftungen bereinigt",
+                                          "Streak-Anzeige auf Smartphone kompakt und ueberlagerungsfrei dargestellt"
+                                      ]
+                    },
+                    {
+                        "version":  "5.7",
+                        "changelog":  [
+                                          "Mobile Heute-Ansicht als kompaktes Dashboard nach Mockup angeordnet",
+                                          "Moment-Auswahl mobil als vier kleine Kacheln gesetzt",
+                                          "Fortschritt, Serie und Abendreflexion fuer den ersten Smartphone-Bildschirm verdichtet"
+                                      ]
+                    },
+                    {
+                        "version":  "5.6",
+                        "changelog":  [
+                                          "Halt-finden-Icon im Header als Inline-SVG eingebettet",
+                                          "Header-Icon laedt dadurch unabhaengig von einer separaten SVG-Datei"
+                                      ]
+                    },
                     {
                         "version":  "5.5",
                         "changelog":  [
