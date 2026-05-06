@@ -1,7 +1,14 @@
 {
-    "appVersion":  "6.1",
+    "appVersion":  "6.1.1",
     "released":  "2026-05-06",
     "updates":  [
+                    {
+                        "version":  "6.1.1",
+                        "changelog":  [
+                                          "Begruessung richtet sich wieder nach Morgen, Mittag und Abend",
+                                          "Tageszeitwechsel aktualisiert Begruessung und Vorschlaege im laufenden Betrieb"
+                                      ]
+                    },
                     {
                         "version":  "6.1",
                         "changelog":  [
