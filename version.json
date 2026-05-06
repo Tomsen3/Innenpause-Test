@@ -1,7 +1,23 @@
 {
-    "appVersion":  "5.9",
+    "appVersion":  "6.1",
     "released":  "2026-05-06",
     "updates":  [
+                    {
+                        "version":  "6.1",
+                        "changelog":  [
+                                          "Wellen-Icon in der empfohlenen Uebung mobil im Kreis zentriert",
+                                          "Reflexions-Icon mobil verkleinert, damit es sauber in den Kreis passt"
+                                      ]
+                    },
+                    {
+                        "version":  "6.0",
+                        "changelog":  [
+                                          "Begruessung mobil auf eine Zeile gesetzt",
+                                          "Doppelte Anfuehrungszeichen im Tagesimpuls-Kreis entfernt",
+                                          "Tagesimpuls-Index laeuft kalendertagsbasiert weiter",
+                                          "Irritierende Pfeile ohne Aktion bei Moment-Karte und Streak mobil entfernt"
+                                      ]
+                    },
                     {
                         "version":  "5.9",
                         "changelog":  [
