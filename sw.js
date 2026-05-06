@@ -1,6 +1,6 @@
-// sw.js - stabilisierte Version (v4.9)
+// sw.js - stabilisierte Version (v5.1)
 
-const CACHE_NAME = 'innenpause-v4-9';
+const CACHE_NAME = 'innenpause-v5-1';
 const CACHE_PREFIX = 'innenpause-';
 
 const SHELL = [
@@ -12,6 +12,7 @@ const SHELL = [
   './version.json',
   './data/bausteine.json',
   './data/hilfe.json',
+  './assets/tagesimpuls-bg.png',
   './assets/meditationsfigur.svg',
   './herz_haende_exakt.svg',
   './assets/herz_haende_moment_v2.svg'

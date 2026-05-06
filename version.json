@@ -1,7 +1,23 @@
 {
-    "appVersion":  "4.9",
+    "appVersion":  "5.1",
     "released":  "2026-05-06",
     "updates":  [
+                    {
+                        "version":  "5.1",
+                        "changelog":  [
+                                          "Tagesimpuls-Bild auch mobil sichtbar gemacht",
+                                          "Mobile Tagesimpuls-Karte auf Bild, Text und Tabbar abgestimmt",
+                                          "Tagesimpuls-Bild in den Service-Worker-Cache aufgenommen"
+                                      ]
+                    },
+                    {
+                        "version":  "5.0",
+                        "changelog":  [
+                                          "Mobile Heute-Ansicht deutlich kompakter skaliert",
+                                          "Header, Werkzeug-Buttons, Begruessung, Tagesimpuls und Tabbar fuer Smartphone neu verdichtet",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
                     {
                         "version":  "4.9",
                         "changelog":  [
