@@ -1,7 +1,17 @@
 {
-    "appVersion":  "6.1.4",
+    "appVersion":  "6.1.5",
     "released":  "2026-05-06",
     "updates":  [
+                    {
+                        "version":  "6.1.5",
+                        "changelog":  [
+                                          "Klangdatei fuer GitHub-Deploy im App-Asset ersetzt",
+                                          "Klang-Schalter unter das Blatt im Header gesetzt",
+                                          "Atem-Pop-up beim Einschalten der Klang-Erinnerung ergaenzt",
+                                          "Untere Navigation dauerhaft am Bildschirmrand verankert",
+                                          "Klang-Hinweise mit deutschen Umlauten korrigiert"
+                                      ]
+                    },
                     {
                         "version":  "6.1.4",
                         "changelog":  [
