@@ -1,7 +1,28 @@
 {
-    "appVersion":  "6.1.23",
+    "appVersion":  "6.1.26",
     "released":  "2026-05-07",
     "updates":  [
+                    {
+                        "version":  "6.1.26",
+                        "changelog":  [
+                                          "Anführungszeichen im Tagesimpuls auf ein einzelnes sauberes Zeichen reduziert",
+                                          "Hintergrundbild im mobilen Tagesimpuls etwas weiter nach links gezogen"
+                                      ]
+                    },
+                    {
+                        "version":  "6.1.25",
+                        "changelog":  [
+                                          "Anführungszeichen im mobilen Tagesimpuls optisch korrigiert"
+                                      ]
+                    },
+                    {
+                        "version":  "6.1.24",
+                        "changelog":  [
+                                          "Mobile Proportionen im Heute-Kopfbereich weiter an das Beispiel angepasst",
+                                          "Tagesimpuls-Karte mobil deutlich niedriger und mit sichtbarerem Bildbereich gestaltet",
+                                          "Logo, Begrüßung und Klang-/Hilfe-Buttons mobil feiner skaliert"
+                                      ]
+                    },
                     {
                         "version":  "6.1.23",
                         "changelog":  [
