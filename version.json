@@ -1,7 +1,14 @@
 {
-    "appVersion":  "6.1.18",
+    "appVersion":  "6.1.19",
     "released":  "2026-05-07",
     "updates":  [
+                    {
+                        "version":  "6.1.19",
+                        "changelog":  [
+                                          "Heute-Header als ruhigen Ankommensbereich ueberarbeitet",
+                                          "Tagesimpuls-Karte mit neuem Hintergrundbild und laenger sichtbarer Klang-Erinnerung aktualisiert"
+                                      ]
+                    },
                     {
                         "version":  "6.1.18",
                         "changelog":  [
