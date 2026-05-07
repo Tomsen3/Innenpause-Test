@@ -1,665 +1,20 @@
-/* Lokale Schrift-Definitionen als Ersatz für Google Fonts */
-  @font-face {
-    font-family: 'Lora';
-    src: local('Georgia'), local('Times New Roman');
-    font-style: normal;
-  }
-
 /* ============================================================
-   DESIGN-TEST: Mockup-nahe Heute-Ansicht
+   styles.css – bereinigte Fassung
+   Grundlage: bestehende App-Styles.
+   Aufbau:
+   1. lokale Schriftdefinitionen
+   2. Basis-Styles der App
+   3. Klang-Ergänzungen
+   4. finaler Header-/Heute-Override
    ============================================================ */
-body {
-  background:
-    radial-gradient(circle at 12% 0%, rgba(246,241,229,0.95), transparent 32rem),
-    linear-gradient(180deg, #fffdfa 0%, #f8f7f1 52%, #f1f4ec 100%);
-}
 
-#impuls-header {
-  position: relative;
-  top: auto;
-  z-index: 1;
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 30px 42px 18px;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  color: #172c24;
-}
-
-.mock-header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 22px;
-}
-
-.app-titel-bereich {
-  border-bottom: 0;
-  padding-bottom: 0;
-  margin-bottom: 46px;
-  align-items: center;
-  gap: 12px;
-}
-
-.app-logo-mark {
-  width: 42px;
-  height: 42px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #78977b;
-  font-size: 38px;
-  line-height: 1;
-  transform: rotate(-18deg);
-}
-
-#app-titel-anzeige {
-  font-size: 38px;
-  line-height: 1;
-  color: #173129;
-  letter-spacing: 0;
-}
-
-#app-untertitel-anzeige {
-  display: none;
-}
-
-.header-meta {
-  margin-left: 0;
-  align-items: flex-end;
-}
-
-.header-tools {
-  gap: 26px;
-  align-items: flex-start;
-}
-
-.header-halt-btn,
-.hilfe-btn {
-  width: 72px;
-  min-height: 84px;
-  padding: 0;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
-  border: 0;
-  background: transparent;
-  color: #4d5750;
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.header-tool-icon,
-.hilfe-btn::before {
-  width: 56px;
-  height: 56px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(93,104,96,0.24);
-  border-radius: 999px;
-  background: rgba(255,255,255,0.74);
-  box-shadow: 0 4px 18px rgba(36,49,39,0.08);
-  color: #66716a;
-  font-size: 31px;
-}
-
-.hilfe-btn {
-  font-size: 0;
-}
-
-.hilfe-btn::before {
-  content: "?";
-  font-size: 28px;
-  font-weight: 500;
-}
-
-.hilfe-btn::after {
-  content: "Hilfe";
-  font-size: 15px;
-}
-
-.lang-btn {
-  display: none !important;
-}
-
-.header-greeting {
-  max-width: none;
-  text-align: left;
-  margin-bottom: 32px;
-}
-
-.header-greeting-main {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 22px;
-  font-weight: 500;
-  color: #526159;
-}
-
-.header-greeting-title {
-  display: block;
-  margin-top: 2px;
-  font-family: 'Lora', serif;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.12;
-  color: #173129;
-}
-
-.header-greeting-date {
-  margin-top: 8px;
-  font-size: 22px;
-  color: #7a817c;
-}
-
-.impuls-card {
-  position: relative;
-  min-height: 176px;
-  display: grid;
-  grid-template-columns: 74px minmax(0,1fr) 38%;
-  align-items: center;
-  gap: 12px;
-  overflow: hidden;
-  border-radius: 16px;
-  background: linear-gradient(90deg, #f3f6eb 0%, #f7f5ea 56%, #e8efe4 100%);
-  box-shadow: 0 12px 30px rgba(44,54,43,0.13);
-}
-
-.impuls-quote-mark {
-  width: 58px;
-  height: 58px;
-  margin-left: 22px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  background: linear-gradient(145deg, #789a77, #496c53);
-  color: #fffaf2;
-  font-family: Georgia, serif;
-  font-size: 48px;
-  line-height: 1;
-}
-
-.impuls-label {
-  margin: 0 0 10px;
-  color: #2d633d;
-  text-transform: none;
-  font-size: 20px;
-  font-weight: 800;
-}
-
-.impuls-text {
-  max-width: 33rem;
-  font-family: 'DM Sans', sans-serif;
+@font-face {
+  font-family: 'Lora';
+  src: local('Georgia'), local('Times New Roman');
   font-style: normal;
-  font-size: 19px;
-  line-height: 1.55;
-  color: #1e2321;
 }
 
-.impuls-kategorie {
-  margin-top: 18px;
-  color: #687a69;
-  font-size: 15px;
-}
-
-.impuls-landscape {
-  align-self: stretch;
-  min-height: 176px;
-  background:
-    radial-gradient(circle at 48% 45%, rgba(255,231,178,0.72) 0 8px, transparent 24px),
-    linear-gradient(145deg, transparent 0 38%, rgba(74,105,74,0.22) 39% 46%, transparent 47%),
-    linear-gradient(135deg, transparent 0 18%, rgba(94,125,89,0.30) 19% 35%, transparent 36%),
-    linear-gradient(180deg, rgba(227,236,221,0.20), rgba(96,130,96,0.26)),
-    linear-gradient(160deg, #edf2e8, #c4d3be);
-  clip-path: ellipse(84% 92% at 82% 50%);
-}
-
-#tab-bar {
-  position: fixed;
-  top: auto !important;
-  left: 50%;
-  bottom: 16px;
-  width: min(680px, calc(100% - 32px));
-  transform: translateX(-50%);
-  z-index: 120;
-  padding: 8px;
-  border: 0;
-  border-radius: 28px;
-  background: rgba(255,255,255,0.88);
-  box-shadow: 0 12px 34px rgba(36,49,39,0.12);
-  backdrop-filter: blur(14px);
-}
-
-.tab-btn {
-  min-height: 62px;
-  border-radius: 22px;
-  border-bottom: 0;
-  color: #4a514d;
-}
-
-.tab-btn.active {
-  background: rgba(237,241,232,0.92);
-  border-bottom: 0;
-  color: #2c6844;
-  box-shadow: inset 0 -3px 0 #2f6847;
-}
-
-#main {
-  max-width: 760px;
-  padding: 0 42px 118px;
-}
-
-.heute-einstieg-card,
-.card,
-.tagesfortschritt-card,
-.streak-bar,
-.naechster-schritt-card,
-.uebung-jetzt-card {
-  border: 1px solid rgba(49,70,55,0.09);
-  border-radius: 16px;
-  background: rgba(255,255,255,0.82);
-  box-shadow: 0 10px 26px rgba(44,54,43,0.09);
-}
-
-.heute-einstieg-card {
-  margin: 16px 0 24px;
-  padding: 24px;
-}
-
-.moment-card-main {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 68px minmax(0, 1fr) 26px;
-  gap: 18px;
-  align-items: center;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  text-align: left;
-  cursor: pointer;
-  font-family: 'DM Sans', sans-serif;
-}
-
-.moment-card-icon,
-.moment-option span,
-.uebung-jetzt-card::after {
-  width: 58px;
-  height: 58px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  background: #eef3e8;
-  color: #3e744e;
-  font-size: 31px;
-}
-
-.heute-einstieg-title {
-  display: block;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 24px;
-  font-weight: 800;
-  line-height: 1.2;
-  color: #2d633d;
-  text-align: left;
-  margin: 0;
-}
-
-.moment-card-sub {
-  display: block;
-  margin-top: 4px;
-  color: #747b76;
-  font-size: 18px;
-}
-
-.moment-card-arrow {
-  color: #66716a;
-  font-size: 48px;
-  line-height: 1;
-}
-
-.moment-auswahl,
-.moment-auswahl.open {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 24px;
-  padding-top: 0;
-  border-top: 0;
-}
-
-.moment-option {
-  min-height: 142px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.72);
-  color: #2e4136;
-  font-size: 18px;
-  line-height: 1.14;
-}
-
-.moment-option strong {
-  font-weight: 500;
-}
-
-.moment-option-halt,
-.moment-option-halt span {
-  color: #c45f34;
-}
-
-.moment-option-halt span {
-  background: #f8e7df;
-}
-
-.section-label {
-  padding: 0 0 12px;
-  color: #2d633d;
-  font-size: 20px;
-  font-weight: 800;
-}
-
-.uebung-jetzt-card {
-  position: relative;
-  min-height: 88px;
-  margin: 0 0 24px;
-  padding: 18px 24px 18px 100px;
-  display: grid;
-  grid-template-columns: minmax(0,1fr) auto;
-  gap: 18px;
-  align-items: center;
-  overflow: hidden;
-  background: linear-gradient(90deg, #eef4e9, #f7f8f1);
-}
-
-.uebung-jetzt-card::before {
-  display: none;
-}
-
-.uebung-jetzt-card::after {
-  content: "≋";
-  position: absolute;
-  left: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.uebung-jetzt-label,
-.uebung-jetzt-meta,
-.uebung-jetzt-desc,
-.smart-hinweis {
-  display: none;
-}
-
-.uebung-jetzt-titel {
-  margin: 0;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 24px;
-  font-weight: 800;
-}
-
-.uebung-jetzt-actions {
-  display: flex;
-  gap: 10px;
-  margin: 0;
-}
-
-.uebung-jetzt-actions .btn-secondary {
-  display: none;
-}
-
-.btn-primary {
-  border-radius: 18px;
-  background: linear-gradient(180deg, #3a784f, #2d633e);
-  color: #fffaf3;
-  box-shadow: 0 7px 18px rgba(45,99,62,0.24);
-}
-
-.heute-mehr-toggle-wrap {
-  display: none;
-}
-
-.heute-mehr-bereich {
-  display: block;
-}
-
-#schnellzugriff-container,
-#naechster-schritt-container,
-.heute-grid,
-#heute-vorschlaege-container,
-#journal-eintraege-heute,
-#heute-uebungen-container {
-  display: none;
-}
-
-#tagesfortschritt-container,
-#streak-container {
-  display: inline-block;
-  width: calc(50% - 10px);
-  vertical-align: top;
-}
-
-#tagesfortschritt-container {
-  margin-right: 16px;
-}
-
-.tagesfortschritt-card,
-.streak-bar {
-  min-height: 132px;
-  margin: 0 0 22px;
-  padding: 18px 22px;
-}
-
-.tagesfortschritt-title,
-.streak-label {
-  color: #26392f;
-  font-size: 16px;
-  font-weight: 750;
-}
-
-.tagesfortschritt-bar {
-  width: 72px;
-  height: 72px;
-  border-radius: 999px;
-  background: conic-gradient(#2d7647 0 60%, #dce8d8 0 100%);
-}
-
-.tagesfortschritt-fill,
-.streak-tage,
-.streak-info-btn {
-  display: none;
-}
-
-.tagesfortschritt-count {
-  color: #2d7647;
-  font-size: 20px;
-}
-
-.streak-feuer {
-  width: 58px;
-  height: 58px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  background: #f8e7df;
-  font-size: 28px;
-}
-
-.streak-zahl {
-  display: inline;
-  color: #173129;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 34px;
-  font-weight: 800;
-}
-
-.card-reflexion {
-  margin: 0 0 22px;
-  padding: 22px 24px;
-  border-left: 0;
-}
-
-#abschluss-card {
-  display: none;
-}
-
-@media (max-width: 700px) {
-  #impuls-header {
-    padding: 24px 18px 14px;
-  }
-  .mock-header-top {
-    gap: 12px;
-  }
-  #app-titel-anzeige {
-    font-size: 30px;
-  }
-  .app-titel-bereich {
-    margin-bottom: 30px;
-  }
-  .header-tools {
-    gap: 12px;
-  }
-  .header-halt-btn,
-  .hilfe-btn {
-    width: 58px;
-    min-height: 72px;
-    font-size: 13px;
-  }
-  .header-tool-icon,
-  .hilfe-btn::before {
-    width: 48px;
-    height: 48px;
-    font-size: 25px;
-  }
-  .header-greeting-title {
-    font-size: 34px;
-  }
-  .header-greeting-main,
-  .header-greeting-date {
-    font-size: 18px;
-  }
-  .impuls-card {
-    grid-template-columns: 58px minmax(0,1fr);
-    padding: 18px;
-  }
-  .impuls-quote-mark {
-    width: 48px;
-    height: 48px;
-    margin-left: 0;
-  }
-  .impuls-landscape {
-    display: none;
-  }
-  #main {
-    padding: 0 18px 112px;
-  }
-  .moment-auswahl,
-  .moment-auswahl.open {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .moment-option {
-    min-height: 118px;
-    font-size: 16px;
-  }
-  .uebung-jetzt-card {
-    grid-template-columns: 1fr;
-    padding-right: 18px;
-  }
-  #tagesfortschritt-container,
-  #streak-container {
-    display: block;
-    width: 100%;
-  }
-  #tagesfortschritt-container {
-    margin-right: 0;
-  }
-}
-
-/* ============================================================
-   Klang: aktive Markierung und ruhiger Hinweis
-   ============================================================ */
-.header-tools .klang-toggle-btn.active #klang-toggle-icon,
-.klang-toggle-btn.active #klang-toggle-icon {
-  background: linear-gradient(180deg, rgba(232, 241, 226, 0.96), rgba(214, 229, 207, 0.96)) !important;
-  border-color: rgba(47, 106, 80, 0.32) !important;
-  color: #2f6a50 !important;
-  box-shadow:
-    0 10px 24px rgba(47, 106, 80, 0.16),
-    inset 0 1px 0 rgba(255, 255, 255, 0.92),
-    inset 0 0 0 6px rgba(255, 255, 255, 0.28) !important;
-}
-
-.header-tools .klang-toggle-btn.active #klang-toggle-label {
-  color: #2f6a50 !important;
-}
-
-#toast.klang-toast {
-  bottom: calc(104px + env(safe-area-inset-bottom)) !important;
-  width: min(360px, calc(100vw - 38px)) !important;
-  max-width: min(360px, calc(100vw - 38px)) !important;
-  padding: 18px 22px 18px 58px !important;
-  border-radius: 24px !important;
-  border: 1px solid rgba(47, 106, 80, 0.18) !important;
-  background:
-    radial-gradient(circle at 18px 18px, rgba(214, 229, 207, 0.62), transparent 58px),
-    rgba(255, 253, 247, 0.97) !important;
-  color: #24402d !important;
-  box-shadow:
-    0 24px 58px rgba(31, 41, 35, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.86) !important;
-  font-family: 'Lora', Georgia, 'Times New Roman', serif !important;
-  font-size: 17px !important;
-  font-style: italic !important;
-  line-height: 1.36 !important;
-  text-align: left !important;
-  transform: translateX(-50%) translateY(22px) scale(0.985) !important;
-  transition:
-    opacity 1.05s ease,
-    transform 1.05s cubic-bezier(.2,.7,.2,1) !important;
-}
-
-#toast.klang-toast::before {
-  content: "♪" !important;
-  position: absolute !important;
-  left: 18px !important;
-  top: 50% !important;
-  width: 28px !important;
-  height: 28px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border-radius: 50% !important;
-  background: rgba(232, 241, 226, 0.95) !important;
-  color: #2f6a50 !important;
-  font-family: Georgia, 'Times New Roman', serif !important;
-  font-size: 22px !important;
-  font-style: normal !important;
-  line-height: 1 !important;
-  transform: translateY(-50%) !important;
-}
-
-#toast.klang-toast.show {
-  opacity: 1 !important;
-  transform: translateX(-50%) translateY(0) scale(1) !important;
-}
-
-@media (max-width: 380px) {
-  #toast.klang-toast {
-    width: min(330px, calc(100vw - 28px)) !important;
-    max-width: min(330px, calc(100vw - 28px)) !important;
-    padding: 16px 18px 16px 52px !important;
-    font-size: 15px !important;
-  }
-}
-  @font-face {
+@font-face {
     font-family: 'DM Sans';
     src: local('Segoe UI'), local('Helvetica Neue'), local('Arial');
     font-style: normal;
@@ -8443,5 +7798,680 @@ body {
       linear-gradient(90deg, rgba(255, 253, 247, 0.90) 0%, rgba(255, 253, 247, 0.28) 28%, rgba(255, 253, 247, 0) 54%),
       url("../assets/hintergrund.png?v=6.1.37") center / 90% auto no-repeat !important;
     background-color: #edf3e8 !important;
+  }
+}
+
+/* ============================================================
+   Klang: aktive Markierung und ruhiger Hinweis
+   ============================================================ */
+.header-tools .klang-toggle-btn.active #klang-toggle-icon,
+.klang-toggle-btn.active #klang-toggle-icon {
+  background: linear-gradient(180deg, rgba(232, 241, 226, 0.96), rgba(214, 229, 207, 0.96)) !important;
+  border-color: rgba(47, 106, 80, 0.32) !important;
+  color: #2f6a50 !important;
+  box-shadow:
+    0 10px 24px rgba(47, 106, 80, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    inset 0 0 0 6px rgba(255, 255, 255, 0.28) !important;
+}
+
+.header-tools .klang-toggle-btn.active #klang-toggle-label {
+  color: #2f6a50 !important;
+}
+
+#toast.klang-toast {
+  bottom: calc(104px + env(safe-area-inset-bottom)) !important;
+  width: min(360px, calc(100vw - 38px)) !important;
+  max-width: min(360px, calc(100vw - 38px)) !important;
+  padding: 18px 22px 18px 58px !important;
+  border-radius: 24px !important;
+  border: 1px solid rgba(47, 106, 80, 0.18) !important;
+  background:
+    radial-gradient(circle at 18px 18px, rgba(214, 229, 207, 0.62), transparent 58px),
+    rgba(255, 253, 247, 0.97) !important;
+  color: #24402d !important;
+  box-shadow:
+    0 24px 58px rgba(31, 41, 35, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.86) !important;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif !important;
+  font-size: 17px !important;
+  font-style: italic !important;
+  line-height: 1.36 !important;
+  text-align: left !important;
+  transform: translateX(-50%) translateY(22px) scale(0.985) !important;
+  transition:
+    opacity 1.05s ease,
+    transform 1.05s cubic-bezier(.2,.7,.2,1) !important;
+}
+
+#toast.klang-toast::before {
+  content: "♪" !important;
+  position: absolute !important;
+  left: 18px !important;
+  top: 50% !important;
+  width: 28px !important;
+  height: 28px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  background: rgba(232, 241, 226, 0.95) !important;
+  color: #2f6a50 !important;
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-size: 22px !important;
+  font-style: normal !important;
+  line-height: 1 !important;
+  transform: translateY(-50%) !important;
+}
+
+#toast.klang-toast.show {
+  opacity: 1 !important;
+  transform: translateX(-50%) translateY(0) scale(1) !important;
+}
+
+@media (max-width: 380px) {
+  #toast.klang-toast {
+    width: min(330px, calc(100vw - 28px)) !important;
+    max-width: min(330px, calc(100vw - 28px)) !important;
+    padding: 16px 18px 16px 52px !important;
+    font-size: 15px !important;
+  }
+}
+
+/* ============================================================
+   FINALER HEADER-STIL: Heute-Ansicht / Mockup-nah
+   Dieser Abschnitt steht bewusst am Ende der Datei.
+   Er überschreibt die älteren Header-Regeln aus der Basis-CSS.
+   ============================================================ */
+
+body {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(246,241,229,0.95), transparent 32rem),
+    linear-gradient(180deg, #fffdfa 0%, #f8f7f1 52%, #f1f4ec 100%);
+}
+
+#impuls-header {
+  position: relative;
+  top: auto;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 30px 42px 18px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: #172c24;
+}
+
+.mock-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.app-titel-bereich {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 24px;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-logo-mark {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #78977b;
+  font-size: 38px;
+  line-height: 1;
+  transform: rotate(-18deg);
+}
+
+#app-titel-anzeige {
+  font-size: 38px;
+  line-height: 1;
+  color: #173129;
+  letter-spacing: 0;
+}
+
+#app-untertitel-anzeige {
+  display: none;
+}
+
+.header-meta {
+  margin-left: 0;
+  align-items: flex-end;
+}
+
+.header-tools {
+  gap: 26px;
+  align-items: flex-start;
+}
+
+.header-halt-btn,
+.hilfe-btn {
+  width: 72px;
+  min-height: 84px;
+  padding: 0;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  color: #4d5750;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.header-tool-icon,
+.hilfe-btn::before {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(93,104,96,0.24);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.74);
+  box-shadow: 0 4px 18px rgba(36,49,39,0.08);
+  color: #66716a;
+  font-size: 31px;
+}
+
+.hilfe-btn {
+  font-size: 0;
+}
+
+.hilfe-btn::before {
+  content: "?";
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.hilfe-btn::after {
+  content: "Hilfe";
+  font-size: 15px;
+}
+
+.lang-btn {
+  display: none !important;
+}
+
+.header-greeting {
+  max-width: none;
+  text-align: left;
+  margin-bottom: 32px;
+  color: #263629;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.header-greeting-main {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #526159;
+}
+
+.header-greeting-title {
+  display: block;
+  margin-top: 2px;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.9rem, 5vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: #173129;
+}
+
+.header-greeting-date {
+  margin-top: 8px;
+  font-size: 22px;
+  color: #7a817c;
+}
+
+.impuls-card {
+  position: relative;
+  min-height: 176px;
+  display: grid;
+  grid-template-columns: 74px minmax(0,1fr) 38%;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #f3f6eb 0%, #f7f5ea 56%, #e8efe4 100%);
+  box-shadow: 0 12px 30px rgba(44,54,43,0.13);
+}
+
+.impuls-quote-mark {
+  width: 58px;
+  height: 58px;
+  margin-left: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: linear-gradient(145deg, #789a77, #496c53);
+  color: #fffaf2;
+  font-family: Georgia, serif;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.impuls-label {
+  margin: 0 0 10px;
+  color: #2d633d;
+  text-transform: none;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.impuls-text {
+  max-width: 33rem;
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-size: 19px;
+  line-height: 1.55;
+  color: #1e2321;
+}
+
+.impuls-kategorie {
+  margin-top: 18px;
+  color: #687a69;
+  font-size: 15px;
+}
+
+.impuls-landscape {
+  align-self: stretch;
+  min-height: 176px;
+  background:
+    radial-gradient(circle at 48% 45%, rgba(255,231,178,0.72) 0 8px, transparent 24px),
+    linear-gradient(145deg, transparent 0 38%, rgba(74,105,74,0.22) 39% 46%, transparent 47%),
+    linear-gradient(135deg, transparent 0 18%, rgba(94,125,89,0.30) 19% 35%, transparent 36%),
+    linear-gradient(180deg, rgba(227,236,221,0.20), rgba(96,130,96,0.26)),
+    linear-gradient(160deg, #edf2e8, #c4d3be);
+  clip-path: ellipse(84% 92% at 82% 50%);
+}
+
+#tab-bar {
+  position: fixed;
+  top: auto !important;
+  left: 50%;
+  bottom: 16px;
+  width: min(680px, calc(100% - 32px));
+  transform: translateX(-50%);
+  z-index: 120;
+  padding: 8px;
+  border: 0;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.88);
+  box-shadow: 0 12px 34px rgba(36,49,39,0.12);
+  backdrop-filter: blur(14px);
+}
+
+.tab-btn {
+  min-height: 62px;
+  border-radius: 22px;
+  border-bottom: 0;
+  color: #4a514d;
+}
+
+.tab-btn.active {
+  background: rgba(237,241,232,0.92);
+  border-bottom: 0;
+  color: #2c6844;
+  box-shadow: inset 0 -3px 0 #2f6847;
+}
+
+#main {
+  max-width: 760px;
+  padding: 0 42px 118px;
+}
+
+.heute-einstieg-card,
+.card,
+.tagesfortschritt-card,
+.streak-bar,
+.naechster-schritt-card,
+.uebung-jetzt-card {
+  border: 1px solid rgba(49,70,55,0.09);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.82);
+  box-shadow: 0 10px 26px rgba(44,54,43,0.09);
+}
+
+.heute-einstieg-card {
+  margin: 16px 0 24px;
+  padding: 24px;
+}
+
+.moment-card-main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr) 26px;
+  gap: 18px;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.moment-card-icon,
+.moment-option span,
+.uebung-jetzt-card::after {
+  width: 58px;
+  height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #eef3e8;
+  color: #3e744e;
+  font-size: 31px;
+}
+
+.heute-einstieg-title {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #2d633d;
+  text-align: left;
+  margin: 0;
+}
+
+.moment-card-sub {
+  display: block;
+  margin-top: 4px;
+  color: #747b76;
+  font-size: 18px;
+}
+
+.moment-card-arrow {
+  color: #66716a;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.moment-auswahl,
+.moment-auswahl.open {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.moment-option {
+  min-height: 142px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.72);
+  color: #2e4136;
+  font-size: 18px;
+  line-height: 1.14;
+}
+
+.moment-option strong {
+  font-weight: 500;
+}
+
+.moment-option-halt,
+.moment-option-halt span {
+  color: #c45f34;
+}
+
+.moment-option-halt span {
+  background: #f8e7df;
+}
+
+.section-label {
+  padding: 0 0 12px;
+  color: #2d633d;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.uebung-jetzt-card {
+  position: relative;
+  min-height: 88px;
+  margin: 0 0 24px;
+  padding: 18px 24px 18px 100px;
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto;
+  gap: 18px;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(90deg, #eef4e9, #f7f8f1);
+}
+
+.uebung-jetzt-card::before {
+  display: none;
+}
+
+.uebung-jetzt-card::after {
+  content: "≋";
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.uebung-jetzt-label,
+.uebung-jetzt-meta,
+.uebung-jetzt-desc,
+.smart-hinweis {
+  display: none;
+}
+
+.uebung-jetzt-titel {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.uebung-jetzt-actions {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+}
+
+.uebung-jetzt-actions .btn-secondary {
+  display: none;
+}
+
+.btn-primary {
+  border-radius: 18px;
+  background: linear-gradient(180deg, #3a784f, #2d633e);
+  color: #fffaf3;
+  box-shadow: 0 7px 18px rgba(45,99,62,0.24);
+}
+
+.heute-mehr-toggle-wrap {
+  display: none;
+}
+
+.heute-mehr-bereich {
+  display: block;
+}
+
+#schnellzugriff-container,
+#naechster-schritt-container,
+.heute-grid,
+#heute-vorschlaege-container,
+#journal-eintraege-heute,
+#heute-uebungen-container {
+  display: none;
+}
+
+#tagesfortschritt-container,
+#streak-container {
+  display: inline-block;
+  width: calc(50% - 10px);
+  vertical-align: top;
+}
+
+#tagesfortschritt-container {
+  margin-right: 16px;
+}
+
+.tagesfortschritt-card,
+.streak-bar {
+  min-height: 132px;
+  margin: 0 0 22px;
+  padding: 18px 22px;
+}
+
+.tagesfortschritt-title,
+.streak-label {
+  color: #26392f;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.tagesfortschritt-bar {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  background: conic-gradient(#2d7647 0 60%, #dce8d8 0 100%);
+}
+
+.tagesfortschritt-fill,
+.streak-tage,
+.streak-info-btn {
+  display: none;
+}
+
+.tagesfortschritt-count {
+  color: #2d7647;
+  font-size: 20px;
+}
+
+.streak-feuer {
+  width: 58px;
+  height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #f8e7df;
+  font-size: 28px;
+}
+
+.streak-zahl {
+  display: inline;
+  color: #173129;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.card-reflexion {
+  margin: 0 0 22px;
+  padding: 22px 24px;
+  border-left: 0;
+}
+
+#abschluss-card {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  #impuls-header {
+    padding: 24px 18px 14px;
+  }
+
+  .mock-header-top {
+    gap: 12px;
+  }
+
+  #app-titel-anzeige {
+    font-size: 30px;
+  }
+
+  .app-titel-bereich {
+    margin-bottom: 30px;
+  }
+
+  .header-tools {
+    gap: 12px;
+  }
+
+  .header-halt-btn,
+  .hilfe-btn {
+    width: 58px;
+    min-height: 72px;
+    font-size: 13px;
+  }
+
+  .header-tool-icon,
+  .hilfe-btn::before {
+    width: 48px;
+    height: 48px;
+    font-size: 25px;
+  }
+
+  .header-greeting-main,
+  .header-greeting-date {
+    font-size: 18px;
+  }
+
+  .impuls-card {
+    grid-template-columns: 58px minmax(0,1fr);
+    padding: 18px;
+  }
+
+  .impuls-quote-mark {
+    width: 48px;
+    height: 48px;
+    margin-left: 0;
+  }
+
+  .impuls-landscape {
+    display: none;
+  }
+
+  #main {
+    padding: 0 18px 112px;
+  }
+
+  .moment-auswahl,
+  .moment-auswahl.open {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .moment-option {
+    min-height: 118px;
+    font-size: 16px;
+  }
+
+  .uebung-jetzt-card {
+    grid-template-columns: 1fr;
+    padding-right: 18px;
+  }
+
+  #tagesfortschritt-container,
+  #streak-container {
+    display: block;
+    width: 100%;
+  }
+
+  #tagesfortschritt-container {
+    margin-right: 0;
   }
 }
