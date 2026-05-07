@@ -8542,7 +8542,7 @@ body {
     position: absolute;
     inset: 0 0 0 auto;
     width: clamp(10.4rem, 50vw, 13.2rem);
-    background-image: url("../assets/hintergrund.png?v=6.2.4");
+    background-image: url("../assets/hintergrund.png?v=6.2.5");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -8613,5 +8613,127 @@ body {
     font-size: 0.55rem;
     line-height: 1.05;
     color: #6f7f73;
+  }
+}
+@media (max-width: 700px) {
+
+  .mock-header-top {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 14px !important;
+  }
+
+  .app-titel-bereich {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  .app-logo-mark {
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    margin: 0 !important;
+  }
+
+  .app-logo-img {
+    display: block !important;
+    width: 46px !important;
+    height: 46px !important;
+    object-fit: contain !important;
+  }
+
+  .header-tools {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: flex-end !important;
+    gap: 12px !important;
+    min-width: auto !important;
+  }
+
+  .header-tools .klang-toggle-btn {
+    order: 1 !important;
+  }
+
+  .header-tools .hilfe-btn {
+    order: 2 !important;
+  }
+
+  .header-tools .lang-btn {
+    display: none !important;
+  }
+
+  .klang-toggle-btn,
+  .hilfe-btn {
+    width: 64px !important;
+    min-width: 64px !important;
+    max-width: 64px !important;
+    min-height: 86px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 7px !important;
+    font-family: var(--font-editorial) !important;
+    font-size: 16px !important;
+    line-height: 1.1 !important;
+    color: #173b2d !important;
+  }
+
+  #klang-toggle-icon,
+  .hilfe-icon {
+    width: 58px !important;
+    height: 58px !important;
+    min-width: 58px !important;
+    min-height: 58px !important;
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, 0.78) !important;
+    border: 1px solid rgba(23, 59, 45, 0.16) !important;
+    box-shadow: 0 4px 14px rgba(26, 38, 31, 0.08) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    color: #173b2d !important;
+  }
+
+  #klang-toggle-label {
+    display: block !important;
+    font-family: var(--font-editorial) !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: #173b2d !important;
+  }
+
+  .impuls-label {
+    font-weight: 800 !important;
+    color: #2f6a50 !important;
+  }
+
+  .impuls-card {
+    overflow: hidden !important;
+  }
+
+  .impuls-landscape {
+    overflow: hidden !important;
+    border-radius: 0 16px 16px 0 !important;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255,253,247,0.96) 0%,
+        rgba(255,253,247,0.62) 32%,
+        rgba(255,253,247,0.18) 62%,
+        rgba(255,253,247,0) 100%
+      ),
+      url("../assets/hintergrund.png?v=6.2.5") center center / cover no-repeat !important;
   }
 }
