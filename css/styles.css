@@ -7614,7 +7614,7 @@ body {
   clip-path: none !important;
   background:
     linear-gradient(90deg, rgba(255, 253, 247, 0.98) 0%, rgba(255, 253, 247, 0.68) 22%, rgba(255, 253, 247, 0.16) 48%, rgba(255, 253, 247, 0) 70%),
-    url("../assets/hintergrund.png?v=6.1.37") center right / cover no-repeat !important;
+    url("../assets/hintergrund.png?v=6.1.38") center right / cover no-repeat !important;
 }
 
 #toast {
