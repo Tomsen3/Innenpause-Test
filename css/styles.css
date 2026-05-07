@@ -7555,8 +7555,8 @@ body {
 }
 
 .klang-atem-popup-icon {
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -7564,8 +7564,18 @@ body {
   border-radius: 999px;
   background: rgba(45, 99, 62, 0.10);
   color: #2d633e;
-  font-size: 40px;
+  font-size: 0;
   font-weight: 800;
+}
+
+.klang-atem-popup-icon::before {
+  content: "♪";
+  display: block;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 0.8;
+  transform: translateY(-1px);
 }
 
 .klang-atem-popup-text {
@@ -7709,25 +7719,25 @@ body {
   }
 
   .header-tools {
-    grid-template-columns: 52px 52px !important;
+    grid-template-columns: 44px 62px !important;
     grid-template-rows: auto !important;
     gap: 4px 8px !important;
-    min-width: 112px !important;
+    min-width: 114px !important;
   }
 
   .header-halt-btn,
   .hilfe-btn {
-    width: 52px !important;
-    min-height: 72px !important;
+    width: 62px !important;
+    min-height: 76px !important;
     gap: 5px !important;
     font-size: 12px !important;
   }
 
   .header-tool-icon,
   .hilfe-btn::before {
-    width: 50px !important;
-    height: 50px !important;
-    font-size: 30px !important;
+    width: 58px !important;
+    height: 58px !important;
+    font-size: 38px !important;
   }
 
   .header-halt-icon-img {
@@ -7770,7 +7780,7 @@ body {
   }
 
   .header-tools .hilfe-btn::before {
-    font-size: 30px !important;
+    font-size: 38px !important;
     font-weight: 600 !important;
   }
 }

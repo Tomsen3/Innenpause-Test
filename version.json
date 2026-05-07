@@ -1,7 +1,21 @@
 {
-    "appVersion":  "6.1.12",
+    "appVersion":  "6.1.14",
     "released":  "2026-05-07",
     "updates":  [
+                    {
+                        "version":  "6.1.14",
+                        "changelog":  [
+                                          "Hilfe-Kreis und Fragezeichen im mobilen Header groesser dargestellt",
+                                          "Desktop-Darstellung des Headers unveraendert gelassen"
+                                      ]
+                    },
+                    {
+                        "version":  "6.1.13",
+                        "changelog":  [
+                                          "Note im Klang-Atem-Pop-up als grosses eigenes Symbol gerendert",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
                     {
                         "version":  "6.1.12",
                         "changelog":  [
