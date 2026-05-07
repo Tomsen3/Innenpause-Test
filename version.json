@@ -1,12 +1,28 @@
 {
-    "appVersion":  "6.1.19",
+    "appVersion":  "6.1.21",
     "released":  "2026-05-07",
     "updates":  [
+                    {
+                        "version":  "6.1.21",
+                        "changelog":  [
+                                          "Klang-Hinweis beim ausgelösten Klang als ruhige eigene Karte überarbeitet",
+                                          "Aktiver Klang-Kreis wird nun sanft eingefärbt",
+                                          "Deutsche Umlaute in den neuen sichtbaren Texten korrigiert"
+                                      ]
+                    },
+                    {
+                        "version":  "6.1.20",
+                        "changelog":  [
+                                          "Mobile Heute-Kopfleiste kompakter nach Referenz skaliert",
+                                          "Klang- und Hilfe-Button als runde Icon-Schaltflächen mit richtiger Reihenfolge korrigiert",
+                                          "Hochgeladenes Hintergrundbild fuer die Tagesimpuls-Karte erneut eingebunden"
+                                      ]
+                    },
                     {
                         "version":  "6.1.19",
                         "changelog":  [
                                           "Heute-Header als ruhigen Ankommensbereich ueberarbeitet",
-                                          "Tagesimpuls-Karte mit neuem Hintergrundbild und laenger sichtbarer Klang-Erinnerung aktualisiert"
+                                          "Tagesimpuls-Karte mit neuem Hintergrundbild und länger sichtbarer Klang-Erinnerung aktualisiert"
                                       ]
                     },
                     {
