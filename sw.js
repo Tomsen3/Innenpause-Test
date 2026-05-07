@@ -1,6 +1,6 @@
-// sw.js - stabilisierte Version (v6.2.2)
+// sw.js - stabilisierte Version (v6.2.4)
 
-const CACHE_NAME = 'innenpause-v6-2-2';
+const CACHE_NAME = 'innenpause-v6-2-4';
 const CACHE_PREFIX = 'innenpause-';
 
 const SHELL = [
@@ -23,7 +23,7 @@ const SHELL = [
   './assets/innenpause-klang.mp3',
   './assets/meditationsfigur.svg',
   './herz_haende_exakt.svg',
-  './assets/herz_haende_moment_v2.svg'
+  './assets/herz_haende_moment_v2.svg',
   './assets/innenpause-blatt.png',
 ];
 

@@ -217,6 +217,18 @@
     align-items: center;
     gap: 5px;
   }
+  .lang-btn {
+  background: rgba(255,255,255,0.52);
+  border: 1px solid rgba(111,127,112,0.28);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 3px 6px;
+  border-radius: 6px;
+  opacity: 0.45;
+  transition: opacity 0.2s, border-color 0.2s, background 0.2s;
+  line-height: 1;
+  color: #1f2a21;
+}
   #app-titel-anzeige {
     font-family: 'Cormorant Garamond', serif;
     font-size: 18px;
@@ -8513,4 +8525,93 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+@media (max-width: 700px) {
+
+  #impuls-header .impuls-card {
+    min-height: 0;
+    height: auto;
+    margin: 0 auto;
+    padding: 0.52rem clamp(8.35rem, 39vw, 10rem) 0.5rem 2.05rem;
+    border-radius: 16px;
+    background: rgba(255, 253, 247, 0.76);
+  }
+
+  #impuls-header .impuls-card::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: clamp(10.4rem, 50vw, 13.2rem);
+    background-image: url("../assets/hintergrund.png?v=6.2.4");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0.08) 14%,
+      rgba(0,0,0,0.32) 34%,
+      rgba(0,0,0,0.72) 58%,
+      rgba(0,0,0,1) 100%
+    );
+
+    mask-image: linear-gradient(
+      90deg,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0.08) 14%,
+      rgba(0,0,0,0.32) 34%,
+      rgba(0,0,0,0.72) 58%,
+      rgba(0,0,0,1) 100%
+    );
+
+    border-radius: 0 16px 16px 0;
+  }
+
+  #impuls-header .impuls-copy {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 18.5ch;
+    align-self: center;
+  }
+
+  #impuls-header .impuls-label {
+    position: relative;
+    display: block;
+    margin: 0 0 0.2rem;
+    padding: 0;
+    font-family: var(--font-editorial);
+    font-size: 0.76rem;
+    font-weight: 600;
+    line-height: 1.02;
+    color: #2f6a50;
+  }
+
+  #impuls-header .impuls-label::before {
+    content: "\2726";
+    position: absolute;
+    left: -1.05rem;
+    top: 0.04rem;
+    color: #2f6a50;
+    font-size: 0.72rem;
+    line-height: 1;
+  }
+
+  #impuls-header .impuls-text {
+    max-width: 18.5ch;
+    font-family: var(--font-impuls);
+    font-style: italic;
+    font-size: 0.78rem;
+    font-weight: 400;
+    line-height: 1.14;
+    color: #1f2a24;
+  }
+
+  #impuls-header .impuls-kategorie {
+    margin-top: 0.26rem;
+    font-family: var(--font-ui-soft);
+    font-size: 0.55rem;
+    line-height: 1.05;
+    color: #6f7f73;
+  }
 }
