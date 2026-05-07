@@ -52,7 +52,8 @@
     padding: 0 !important;
     font-family: var(--font-editorial) !important;
     font-size: 0.76rem !important;
-    font-weight: 560 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em !important;
     line-height: 1.02 !important;
     color: #2f6a50 !important;
   }
