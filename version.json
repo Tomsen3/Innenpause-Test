@@ -1,7 +1,14 @@
 {
-    "appVersion":  "6.1.16",
+    "appVersion":  "6.1.17",
     "released":  "2026-05-07",
     "updates":  [
+                    {
+                        "version":  "6.1.17",
+                        "changelog":  [
+                                          "Mobile Hilfe-Schaltflaeche sichtbar zum Klangschalter proportioniert",
+                                          "Stylesheet-Version gegen alten PWA-Cache ergaenzt"
+                                      ]
+                    },
                     {
                         "version":  "6.1.16",
                         "changelog":  [
