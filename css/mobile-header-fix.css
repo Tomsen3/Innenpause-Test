@@ -276,11 +276,13 @@
   }
 
   #impuls-header .app-logo-mark {
-    width: clamp(1.9rem, 8.2vw, 2.25rem) !important;
-    min-width: clamp(1.9rem, 8.2vw, 2.25rem) !important;
-    height: clamp(2.28rem, 9.5vw, 2.65rem) !important;
-    margin-top: 0.02rem !important;
-  }
+    width: clamp(2.5rem, 11vw, 3.2rem) !important;
+    min-width: clamp(2.5rem, 11vw, 3.2rem) !important;
+
+    height: clamp(3rem, 13vw, 3.8rem) !important;
+
+    margin-top: -0.08rem !important;
+}
 
   #impuls-header .app-logo-mark svg {
     stroke-width: 2.05 !important;
