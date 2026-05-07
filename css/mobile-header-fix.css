@@ -1,23 +1,54 @@
+:root {
+  --font-editorial: "Cormorant Garamond", "Lora", Georgia, "Times New Roman", serif;
+  --font-ui-soft: "Source Sans Pro", "Segoe UI", Arial, sans-serif;
+  --font-impuls: "Lora", "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+
 @media (max-width: 700px) {
   #impuls-header {
-    padding: 14px 16px 12px !important;
+    padding: 0.85rem 1rem 0.8rem !important;
+    background:
+      radial-gradient(circle at 86% 52%, rgba(114, 137, 111, 0.16), transparent 26%),
+      linear-gradient(180deg, #f8f5ee 0%, #f2f3ea 68%, #ecefe6 100%) !important;
+    overflow: hidden !important;
+  }
+
+  #impuls-header::before {
+    content: "" !important;
+    position: absolute !important;
+    right: -12% !important;
+    top: 34% !important;
+    width: 42% !important;
+    height: 44% !important;
+    background: rgba(104, 130, 101, 0.16) !important;
+    filter: blur(34px) !important;
+    border-radius: 45% 55% 50% 50% !important;
+    opacity: 0.7 !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+  }
+
+  #impuls-header > * {
+    position: relative !important;
+    z-index: 1 !important;
   }
 
   #impuls-header .mock-header-top {
-    margin-bottom: 34px !important;
-    gap: 10px !important;
+    margin-bottom: clamp(1.65rem, 6.5vw, 2.25rem) !important;
+    gap: 0.7rem !important;
+    align-items: flex-start !important;
   }
 
   #impuls-header .app-titel-bereich {
-    gap: 13px !important;
+    gap: 0.72rem !important;
     min-width: 0 !important;
   }
 
   #impuls-header .app-logo-mark {
-    width: 36px !important;
-    min-width: 36px !important;
-    height: 44px !important;
-    margin-top: 0 !important;
+    width: clamp(1.9rem, 8.2vw, 2.25rem) !important;
+    min-width: clamp(1.9rem, 8.2vw, 2.25rem) !important;
+    height: clamp(2.28rem, 9.5vw, 2.65rem) !important;
+    margin-top: 0.02rem !important;
   }
 
   #impuls-header .app-logo-mark svg {
@@ -25,24 +56,25 @@
   }
 
   #impuls-header #app-titel-anzeige {
-    padding-top: 9px !important;
-    font-size: 28px !important;
-    font-weight: 650 !important;
+    padding-top: 0.42rem !important;
+    font-family: var(--font-editorial) !important;
+    font-size: clamp(1.55rem, 4.8vw, 2rem) !important;
+    font-weight: 600 !important;
     line-height: 1 !important;
-    transform: scaleX(0.9) !important;
-    transform-origin: left center !important;
+    letter-spacing: -0.01em !important;
+    transform: none !important;
   }
 
   #impuls-header .header-tools {
     display: grid !important;
-    grid-template-columns: 52px 52px !important;
+    grid-template-columns: clamp(2.45rem, 10.6vw, 3.05rem) clamp(2.45rem, 10.6vw, 3.05rem) !important;
     grid-auto-flow: column !important;
-    flex: 0 0 114px !important;
-    width: 114px !important;
-    min-width: 114px !important;
+    flex: 0 0 clamp(5.25rem, 23vw, 6.5rem) !important;
+    width: clamp(5.25rem, 23vw, 6.5rem) !important;
+    min-width: clamp(5.25rem, 23vw, 6.5rem) !important;
     justify-content: end !important;
     align-items: start !important;
-    gap: 10px !important;
+    gap: clamp(0.42rem, 2vw, 0.65rem) !important;
   }
 
   #impuls-header .header-tools #klang-toggle-btn {
@@ -59,16 +91,16 @@
 
   #impuls-header .header-tools #klang-toggle-btn,
   #impuls-header .header-tools .hilfe-btn {
-    width: 52px !important;
-    min-width: 52px !important;
-    max-width: 52px !important;
-    min-height: 72px !important;
+    width: clamp(2.45rem, 10.6vw, 3.05rem) !important;
+    min-width: clamp(2.45rem, 10.6vw, 3.05rem) !important;
+    max-width: clamp(2.45rem, 10.6vw, 3.05rem) !important;
+    min-height: clamp(3.42rem, 14.5vw, 4.05rem) !important;
     padding: 0 !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    gap: 7px !important;
+    gap: 0.34rem !important;
     border: 0 !important;
     border-radius: 0 !important;
     background: transparent !important;
@@ -79,13 +111,13 @@
   #impuls-header .header-tools #klang-toggle-icon,
   #impuls-header .header-tools .hilfe-icon {
     box-sizing: border-box !important;
-    width: 50px !important;
-    min-width: 50px !important;
-    max-width: 50px !important;
-    height: 50px !important;
-    min-height: 50px !important;
-    max-height: 50px !important;
-    flex: 0 0 50px !important;
+    width: clamp(2.38rem, 10vw, 2.92rem) !important;
+    min-width: clamp(2.38rem, 10vw, 2.92rem) !important;
+    max-width: clamp(2.38rem, 10vw, 2.92rem) !important;
+    height: clamp(2.38rem, 10vw, 2.92rem) !important;
+    min-height: clamp(2.38rem, 10vw, 2.92rem) !important;
+    max-height: clamp(2.38rem, 10vw, 2.92rem) !important;
+    flex: 0 0 clamp(2.38rem, 10vw, 2.92rem) !important;
     aspect-ratio: 1 / 1 !important;
     display: flex !important;
     align-items: center !important;
@@ -96,15 +128,15 @@
     background: rgba(255, 253, 247, 0.84) !important;
     box-shadow: 0 8px 18px rgba(36, 49, 39, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.94) !important;
     color: #496c55 !important;
-    font-family: Georgia, 'Times New Roman', serif !important;
-    font-size: 32px !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: clamp(1.45rem, 6.5vw, 1.95rem) !important;
     font-weight: 400 !important;
     line-height: 1 !important;
     text-align: center !important;
   }
 
   #impuls-header .header-tools .hilfe-icon {
-    font-size: 31px !important;
+    font-size: clamp(1.55rem, 6.6vw, 2rem) !important;
   }
 
   #impuls-header .header-tools #klang-toggle-btn.active #klang-toggle-icon {
@@ -116,68 +148,98 @@
   #impuls-header .header-tools #klang-toggle-label,
   #impuls-header .header-tools .hilfe-btn > span:last-child {
     display: block !important;
-    width: 52px !important;
-    max-width: 52px !important;
+    width: clamp(2.45rem, 10.6vw, 3.05rem) !important;
+    max-width: clamp(2.45rem, 10.6vw, 3.05rem) !important;
     color: #1d352b !important;
-    font-family: 'Lora', Georgia, 'Times New Roman', serif !important;
-    font-size: 13px !important;
+    font-family: var(--font-ui-soft) !important;
+    font-size: clamp(0.72rem, 2vw, 0.82rem) !important;
     font-weight: 500 !important;
-    line-height: 1.05 !important;
+    line-height: 1.1 !important;
     text-align: center !important;
     white-space: nowrap !important;
   }
 
   #impuls-header .header-greeting {
-    margin: 0 0 20px !important;
+    margin: 0 0 clamp(1rem, 4vw, 1.35rem) !important;
     max-width: 100% !important;
   }
 
   #impuls-header .header-greeting-main {
-    gap: 8px !important;
-    font-size: 14px !important;
-    font-weight: 430 !important;
-    line-height: 1.2 !important;
+    gap: 0.45rem !important;
+    font-family: var(--font-ui-soft) !important;
+    font-size: clamp(0.95rem, 2.8vw, 1.08rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.25 !important;
   }
 
   #impuls-header .header-light-icon {
-    width: 17px !important;
-    height: 17px !important;
-    flex-basis: 17px !important;
+    width: clamp(0.85rem, 3.2vw, 1rem) !important;
+    height: clamp(0.85rem, 3.2vw, 1rem) !important;
+    flex-basis: clamp(0.85rem, 3.2vw, 1rem) !important;
   }
 
   #impuls-header .header-greeting-title {
-    margin-top: 8px !important;
-    max-width: 19rem !important;
-    font-size: 25px !important;
-    font-weight: 650 !important;
-    line-height: 1.08 !important;
-    transform: scaleX(0.94) !important;
-    transform-origin: left center !important;
+    margin-top: clamp(0.42rem, 1.8vw, 0.6rem) !important;
+    max-width: min(100%, 21rem) !important;
+    font-family: var(--font-editorial) !important;
+    font-size: clamp(2.2rem, 7vw, 3.2rem) !important;
+    font-weight: 500 !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.02em !important;
+    transform: none !important;
   }
 
   #impuls-header .impuls-card {
-    grid-template-columns: minmax(0, 1fr) 126px !important;
-    min-height: 124px !important;
-    height: 124px !important;
-    max-height: 124px !important;
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    min-height: 0 !important;
+    height: auto !important;
+    max-height: none !important;
     margin: 0 !important;
-    padding: 14px 0 14px 14px !important;
+    padding: clamp(0.95rem, 3.7vw, 1.2rem) clamp(6.8rem, 31vw, 8rem) clamp(0.95rem, 3.7vw, 1.2rem) clamp(0.9rem, 3.8vw, 1.1rem) !important;
     overflow: hidden !important;
     border-radius: 18px !important;
+    background:
+      rgba(255, 253, 247, 0.78) !important;
+  }
+
+  #impuls-header .impuls-card::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 0 0 auto !important;
+    width: clamp(8.5rem, 39vw, 10rem) !important;
+    height: 100% !important;
+    display: block !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    border-radius: 0 18px 18px 0 !important;
+    background-image:
+      linear-gradient(90deg, rgba(255, 253, 247, 0.96) 0%, rgba(255, 253, 247, 0.58) 25%, rgba(255, 253, 247, 0.12) 52%, rgba(255, 253, 247, 0) 82%),
+      url("../Hintergrund.png") !important;
+    background-position: left center, center center !important;
+    background-size: 100% 100%, cover !important;
+    background-repeat: no-repeat, no-repeat !important;
+    opacity: 1 !important;
   }
 
   #impuls-header .impuls-copy {
+    position: relative !important;
+    z-index: 2 !important;
     align-self: center !important;
-    padding-left: 36px !important;
-    padding-right: 8px !important;
+    padding-left: clamp(2rem, 8.4vw, 2.4rem) !important;
+    padding-right: 0 !important;
     min-width: 0 !important;
+    max-width: 18ch !important;
   }
 
   #impuls-header .impuls-quote-mark {
-    left: 14px !important;
-    top: 58px !important;
-    width: 28px !important;
-    height: 28px !important;
+    z-index: 3 !important;
+    left: clamp(0.82rem, 3.4vw, 1rem) !important;
+    top: 50% !important;
+    width: clamp(1.55rem, 6.4vw, 1.85rem) !important;
+    height: clamp(1.55rem, 6.4vw, 1.85rem) !important;
+    transform: translateY(-50%) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -192,8 +254,8 @@
     display: block !important;
     background: none !important;
     color: #fffaf2 !important;
-    font-family: Georgia, 'Times New Roman', serif !important;
-    font-size: 24px !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: clamp(1.24rem, 5.2vw, 1.5rem) !important;
     font-weight: 700 !important;
     line-height: 1 !important;
     transform: translate(-50%, -50%) !important;
@@ -205,45 +267,32 @@
   }
 
   #impuls-header .impuls-label {
-    margin-bottom: 5px !important;
-    font-size: 14px !important;
+    margin-bottom: clamp(0.26rem, 1.2vw, 0.4rem) !important;
+    font-family: var(--font-editorial) !important;
+    font-size: clamp(1.1rem, 3.5vw, 1.45rem) !important;
+    font-weight: 600 !important;
     line-height: 1.1 !important;
   }
 
   #impuls-header .impuls-text {
-    max-width: 12rem !important;
-    font-size: 13px !important;
-    line-height: 1.24 !important;
+    max-width: 18ch !important;
+    font-family: var(--font-impuls) !important;
+    font-style: italic !important;
+    font-size: clamp(1.02rem, 3.45vw, 1.35rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.22 !important;
+    overflow: visible !important;
   }
 
   #impuls-header .impuls-kategorie {
     display: block !important;
-    margin-top: 7px !important;
-    font-size: 10px !important;
+    margin-top: clamp(0.42rem, 1.8vw, 0.6rem) !important;
+    font-family: var(--font-ui-soft) !important;
+    font-size: clamp(0.68rem, 2vw, 0.78rem) !important;
     line-height: 1.16 !important;
   }
 
-  #impuls-header .impuls-landscape {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 126px !important;
-    min-width: 126px !important;
-    height: 152px !important;
-    min-height: 152px !important;
-    align-self: stretch !important;
-    margin: -14px 0 -14px 0 !important;
-    border-radius: 0 18px 18px 0 !important;
-    clip-path: none !important;
-    background-color: #eef2ec !important;
-    background-image:
-      linear-gradient(90deg, rgba(255, 253, 247, 0.68) 0%, rgba(255, 253, 247, 0.28) 26%, rgba(255, 253, 247, 0.03) 52%, rgba(255, 253, 247, 0) 76%),
-      url("../Hintergrund.png") !important;
-    background-position: left center, 34% center !important;
-    background-size: 100% 100%, auto 118% !important;
-    background-repeat: no-repeat, no-repeat !important;
-  }
-
+  #impuls-header .impuls-landscape,
   #impuls-header .impuls-landscape::before,
   #impuls-header .impuls-landscape::after {
     content: none !important;
@@ -253,108 +302,32 @@
 
 @media (max-width: 380px) {
   #impuls-header {
-    padding: 12px 12px 10px !important;
+    padding: 0.75rem 0.75rem 0.65rem !important;
   }
 
   #impuls-header .mock-header-top {
-    margin-bottom: 30px !important;
-  }
-
-  #impuls-header .app-logo-mark {
-    width: 32px !important;
-    min-width: 32px !important;
-    height: 40px !important;
+    margin-bottom: clamp(1.4rem, 6vw, 1.85rem) !important;
   }
 
   #impuls-header #app-titel-anzeige {
-    font-size: 26px !important;
-  }
-
-  #impuls-header .header-tools {
-    grid-template-columns: 46px 46px !important;
-    flex-basis: 100px !important;
-    width: 100px !important;
-    min-width: 100px !important;
-    gap: 8px !important;
-  }
-
-  #impuls-header .header-tools #klang-toggle-btn,
-  #impuls-header .header-tools .hilfe-btn {
-    width: 46px !important;
-    min-width: 46px !important;
-    max-width: 46px !important;
-    min-height: 64px !important;
-  }
-
-  #impuls-header .header-tools #klang-toggle-icon,
-  #impuls-header .header-tools .hilfe-icon {
-    width: 44px !important;
-    min-width: 44px !important;
-    max-width: 44px !important;
-    height: 44px !important;
-    min-height: 44px !important;
-    max-height: 44px !important;
-    flex-basis: 44px !important;
-    font-size: 29px !important;
-  }
-
-  #impuls-header .header-tools .hilfe-icon {
-    font-size: 28px !important;
-  }
-
-  #impuls-header .header-tools #klang-toggle-label,
-  #impuls-header .header-tools .hilfe-btn > span:last-child {
-    width: 46px !important;
-    max-width: 46px !important;
-    font-size: 11px !important;
-  }
-
-  #impuls-header .header-greeting-main {
-    font-size: 13px !important;
+    font-size: clamp(1.45rem, 7vw, 1.7rem) !important;
   }
 
   #impuls-header .header-greeting-title {
-    font-size: 23px !important;
+    font-size: clamp(1.9rem, 8vw, 2.35rem) !important;
   }
 
   #impuls-header .impuls-card {
-    grid-template-columns: minmax(0, 1fr) 104px !important;
-    min-height: 118px !important;
-    height: 118px !important;
-    max-height: 118px !important;
-    padding-left: 12px !important;
+    padding-right: clamp(5.9rem, 30vw, 6.7rem) !important;
   }
 
-  #impuls-header .impuls-copy {
-    padding-left: 34px !important;
-    padding-right: 6px !important;
-  }
-
-  #impuls-header .impuls-quote-mark {
-    left: 12px !important;
-    top: 56px !important;
-    width: 26px !important;
-    height: 26px !important;
-  }
-
-  #impuls-header .impuls-quote-mark::before {
-    font-size: 22px !important;
-  }
-
-  #impuls-header .impuls-label {
-    font-size: 13px !important;
+  #impuls-header .impuls-card::after {
+    width: clamp(7.2rem, 37vw, 8.6rem) !important;
+    background-position: left center, center center !important;
+    background-size: 100% 100%, cover !important;
   }
 
   #impuls-header .impuls-text {
-    font-size: 12px !important;
-    line-height: 1.22 !important;
-  }
-
-  #impuls-header .impuls-landscape {
-    width: 104px !important;
-    min-width: 104px !important;
-    height: 146px !important;
-    min-height: 146px !important;
-    background-position: left center, 36% center !important;
+    font-size: clamp(0.92rem, 3.8vw, 1.08rem) !important;
   }
 }

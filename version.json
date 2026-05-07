@@ -1,7 +1,27 @@
 {
-    "appVersion":  "6.1.27",
+    "appVersion":  "6.1.30",
     "released":  "2026-05-07",
     "updates":  [
+                    {
+                        "version":  "6.1.30",
+                        "changelog":  [
+                                          "Tagesimpuls-Hintergrundbild produktiv in assets/hintergrund.png verschoben und gecacht"
+                                      ]
+                    },
+                    {
+                        "version":  "6.1.29",
+                        "changelog":  [
+                                          "Hintergrundbild im mobilen Tagesimpuls als eigenes Karten-Bildelement robust eingebunden"
+                                      ]
+                    },
+                    {
+                        "version":  "6.1.28",
+                        "changelog":  [
+                                          "Mobile Typografie nach Font-Vorgaben auf Cormorant/Source-Sans-Stapel und clamp() umgestellt",
+                                          "Mobilen Header niedriger und mit weicherem Beispiel-Verlauf gesetzt",
+                                          "Tagesimpuls mobil ohne feste Texthöhe und mit robustem Hintergrundbild korrigiert"
+                                      ]
+                    },
                     {
                         "version":  "6.1.27",
                         "changelog":  [
