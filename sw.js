@@ -1,6 +1,6 @@
 // sw.js - stabilisierte Version (v5.2)
 
-const CACHE_NAME = 'innenpause-v6-1-14';
+const CACHE_NAME = 'innenpause-v6-1-16';
 const CACHE_PREFIX = 'innenpause-';
 
 const SHELL = [

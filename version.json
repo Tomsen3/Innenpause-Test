@@ -1,7 +1,21 @@
 {
-    "appVersion":  "6.1.14",
+    "appVersion":  "6.1.16",
     "released":  "2026-05-07",
     "updates":  [
+                    {
+                        "version":  "6.1.16",
+                        "changelog":  [
+                                          "Sichtbaren Hilfe-Kreis im mobilen Header an den Klangschalter angeglichen",
+                                          "Mobiles Fragezeichen im Hilfe-Kreis deutlich vergroessert"
+                                      ]
+                    },
+                    {
+                        "version":  "6.1.15",
+                        "changelog":  [
+                                          "Hilfe-Kreis im mobilen Header deutlich groesser an den Klangschalter angeglichen",
+                                          "Fragezeichen im mobilen Hilfe-Kreis vergroessert"
+                                      ]
+                    },
                     {
                         "version":  "6.1.14",
                         "changelog":  [

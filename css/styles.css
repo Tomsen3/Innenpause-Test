@@ -7784,3 +7784,59 @@ body {
     font-weight: 600 !important;
   }
 }
+
+@media (max-width: 700px) {
+  .header-tools {
+    grid-template-columns: 44px 78px !important;
+    min-width: 130px !important;
+    gap: 4px 8px !important;
+  }
+
+  .header-tools .hilfe-btn {
+    width: 78px !important;
+    min-width: 78px !important;
+    min-height: 98px !important;
+    gap: 7px !important;
+    justify-self: center !important;
+  }
+
+  .header-tools .hilfe-btn::before {
+    width: 72px !important;
+    height: 72px !important;
+    flex: 0 0 72px !important;
+    font-size: 48px !important;
+    font-weight: 650 !important;
+    border-width: 2px !important;
+    box-shadow: 0 8px 24px rgba(36,49,39,0.13) !important;
+  }
+
+  .header-tools .hilfe-btn::after {
+    font-size: 14px !important;
+    line-height: 18px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .header-tools .hilfe-btn {
+    width: 78px !important;
+    min-width: 78px !important;
+    min-height: 98px !important;
+    grid-template-rows: 72px 18px !important;
+    gap: 7px !important;
+  }
+
+  .header-tools .hilfe-icon {
+    width: 72px !important;
+    height: 72px !important;
+    flex: 0 0 72px !important;
+    font-size: 48px !important;
+    font-weight: 650 !important;
+    border-width: 2px !important;
+    box-shadow: 0 8px 24px rgba(36,49,39,0.13), inset 0 0 0 6px rgba(255,255,255,0.45) !important;
+  }
+
+  .header-tools .hilfe-btn > span:last-child {
+    font-size: 14px !important;
+    line-height: 18px !important;
+  }
+}
