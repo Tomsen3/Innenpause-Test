@@ -1,7 +1,31 @@
 {
-    "appVersion":  "6.1.34",
+    "appVersion":  "6.1.37",
     "released":  "2026-05-07",
     "updates":  [
+                    {
+                        "version":  "6.1.37",
+                        "changelog":  [
+                                          "Namensabfrage beim ersten Start fuer die persoenliche Begruessung robust verdrahtet",
+                                          "Begruessung nutzt gespeicherten Namen ohne Fallback-Namen",
+                                          "Sonnen-Icon bleibt dynamisch direkt hinter dem Namen",
+                                          "Mobile Begruessungszeile fuer lange Namen umbruchfest gemacht",
+                                          "Namenseingabe neutral ohne Beispielnamen gesetzt"
+                                      ]
+                    },
+                    {
+                        "version":  "6.1.36",
+                        "changelog":  [
+                                          "Tagesimpuls-Bild blendet jetzt per Transparenzmaske in den Texthintergrund ueber"
+                                      ]
+                    },
+                    {
+                        "version":  "6.1.35",
+                        "changelog":  [
+                                          "Begruessung im Heute-Header etwas hoeher gesetzt",
+                                          "Schön-dass-du-da-bist-Schrift mobil verkleinert",
+                                          "Tagesimpuls-Bild groesser und mit weicherem Uebergang eingebunden"
+                                      ]
+                    },
                     {
                         "version":  "6.1.34",
                         "changelog":  [
