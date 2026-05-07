@@ -1,7 +1,15 @@
 {
-    "appVersion":  "6.1.26",
+    "appVersion":  "6.1.27",
     "released":  "2026-05-07",
     "updates":  [
+                    {
+                        "version":  "6.1.27",
+                        "changelog":  [
+                                          "Mobilen Header niedriger und Begrüßung kleiner gesetzt",
+                                          "Tagesimpuls-Karte mobil kompakter mit kleinerem Text korrigiert",
+                                          "Klang-Hinweistext auf „Nimm drei tiefe Atemzüge.“ angepasst"
+                                      ]
+                    },
                     {
                         "version":  "6.1.26",
                         "changelog":  [
