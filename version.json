@@ -1,7 +1,14 @@
 {
-    "appVersion":  "6.1.17",
+    "appVersion":  "6.1.18",
     "released":  "2026-05-07",
     "updates":  [
+                    {
+                        "version":  "6.1.18",
+                        "changelog":  [
+                                          "Mobilen Hilfe-Kreis nach Feinabstimmung etwas kleiner proportioniert",
+                                          "Fragezeichen im Hilfe-Kreis harmonischer skaliert"
+                                      ]
+                    },
                     {
                         "version":  "6.1.17",
                         "changelog":  [
