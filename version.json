@@ -1,7 +1,15 @@
 {
-    "appVersion":  "6.1.31",
+    "appVersion":  "6.1.32",
     "released":  "2026-05-07",
     "updates":  [
+                    {
+                        "version":  "6.1.32",
+                        "changelog":  [
+                                          "Tagesimpuls mobil flacher gestaltet und Schrift weiter verkleinert",
+                                          "Stern mobil direkt vor die Tagesimpuls-Überschrift gesetzt und doppelte Sternquelle entfernt",
+                                          "Tagesimpuls-Bild kleiner skaliert und weiter in die Karte gerückt"
+                                      ]
+                    },
                     {
                         "version":  "6.1.31",
                         "changelog":  [
