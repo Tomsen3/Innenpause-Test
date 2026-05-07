@@ -1,6 +1,6 @@
 // sw.js - stabilisierte Version (v6.2.0)
 
-const CACHE_NAME = 'innenpause-v6-2-0';
+const CACHE_NAME = 'innenpause-v6-2-1';
 const CACHE_PREFIX = 'innenpause-';
 
 const SHELL = [
@@ -24,6 +24,7 @@ const SHELL = [
   './assets/meditationsfigur.svg',
   './herz_haende_exakt.svg',
   './assets/herz_haende_moment_v2.svg'
+  './assets/innenpause-blatt.png',
 ];
 
 // INSTALL

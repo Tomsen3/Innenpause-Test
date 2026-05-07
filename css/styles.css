@@ -8498,3 +8498,19 @@ body {
     margin-right: 0;
   }
 }
+
+
+/* PNG/SVG Logo Support */
+.app-logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.app-logo-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

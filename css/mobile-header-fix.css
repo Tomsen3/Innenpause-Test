@@ -734,3 +734,19 @@
     font-family: var(--font-editorial) !important;
   }
 }
+
+
+/* PNG/SVG Logo Support */
+#impuls-header .app-logo-mark {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+#impuls-header .app-logo-img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
