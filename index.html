@@ -12,8 +12,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Innenpause">
-<link rel="stylesheet" href="./css/styles.css?v=6.1.32">
-<link rel="stylesheet" href="./css/mobile-header-fix.css?v=6.1.32">
+<link rel="stylesheet" href="./css/styles.css?v=6.1.34">
+<link rel="stylesheet" href="./css/mobile-header-fix.css?v=6.1.34">
 </head>
 <body>
 
@@ -728,8 +728,9 @@
 </div>
 
 <!-- FEEDBACK MODAL -->
-<div class="modal-overlay" id="feedback-modal">
-  <div class="modal">
+<div class="modal-overlay" id="feedback-modal" onclick="if(event.target.id==='feedback-modal') schliesseFeedback()">
+  <div class="modal feedback-modal-sheet" role="dialog" aria-modal="true" aria-labelledby="feedback-modal-titel">
+    <button class="modal-close-btn" type="button" onclick="schliesseFeedback()" aria-label="Schließen">×</button>
     <div class="modal-titel" id="feedback-modal-titel">Übung bewerten</div>
     <input type="hidden" id="feedback-daily-id">
     <div style="margin-bottom:16px">
@@ -758,7 +759,7 @@
       <input type="checkbox" id="feedback-markiert"> Als Favorit markieren ⭐
     </label>
     <div style="display:flex;gap:8px">
-      <button class="btn btn-secondary" style="flex:1" onclick="schliesseFeedback()">Abbrechen</button>
+      <button class="btn btn-secondary" id="feedback-abbrechen-btn" style="flex:1" onclick="schliesseFeedback()">Abbrechen</button>
       <button class="btn btn-primary" style="flex:1" onclick="speichereFeedback()">Speichern</button>
     </div>
   </div>
@@ -862,7 +863,7 @@
 // ============================================================
 // APP VERSION
 // ============================================================
-const BUNDLED_APP_VERSION = '6.1.32';
+const BUNDLED_APP_VERSION = '6.1.34';
 let APP_VERSION = BUNDLED_APP_VERSION;
 const HALT_FINDEN_HEADER_ICON = `<svg class="header-halt-icon-img" viewBox="0 0 550 534" focusable="false"><path d="M220.583,108.223c35.26,-1.358 54.417,39.611 54.417,39.611c0.253,-22.045 18.667,-40.319 48.855,-41.026c11.557,-0.271 38.635,10.279 46.625,33.414c12.287,35.572 -43.78,90.992 -43.78,90.992l-51.7,49.599l-67.452,-61.285c-0,0 -31.698,-33.401 -34.356,-51.889c-4.194,-29.161 22.507,-58.458 47.391,-59.416Z"/><path d="M94.677,191.687c52.125,-4.64 27.94,63.308 41.026,79.224c8.651,10.522 27.599,11.269 37.489,16.268c21.22,10.728 67.433,50.811 74.978,74.271c7.952,24.728 1.468,57.093 4.244,74.978c1.061,6.838 -77.902,2.376 -74.271,2.829c3.912,0.489 0.551,-31.796 0,-45.269c-1.063,-25.978 -81.944,-44.807 -83.466,-82.759c-2.122,-52.933 -7.061,-118.914 0,-119.542Z"/><path d="M134.657,269.401c-7.78,31.044 25.095,60.69 43.486,73.658"/><path d="M447.522,193.809c-52.125,-4.64 -27.94,63.308 -41.026,79.224c-8.652,10.522 -27.599,11.269 -37.489,16.269c-21.22,10.727 -67.433,50.81 -74.978,74.27c-7.953,24.728 -1.469,57.093 -4.244,74.978c-1.061,6.838 77.902,2.376 74.271,2.829c-3.912,0.489 -0.552,-31.796 -0,-45.269c1.063,-25.978 81.944,-44.807 83.466,-82.759c2.122,-52.933 7.06,-118.914 -0,-119.542Z"/><path d="M406.947,272.444c8.488,33.873 -24.501,59.769 -42.891,72.737"/></svg>`;
 let VERSION_UPDATES = [];
@@ -2261,6 +2262,7 @@ function setDaumen(val) {
 
 function schliesseFeedback() {
   document.getElementById('feedback-modal').classList.remove('open');
+  feedbackDailyId = null;
 }
 
 function speichereFeedback() {
@@ -5235,8 +5237,8 @@ function initialisiereSprache() {
   if (feedbackNotiz) feedbackNotiz.placeholder = t('feedback_notiz_placeholder');
   const feedbackFavLabel = document.getElementById('feedback-fav-label');
   if (feedbackFavLabel) feedbackFavLabel.innerHTML = `<input type="checkbox" id="feedback-markiert"> ${t('feedback_fav')}`;
-  document.querySelector('[onclick="schliesseFeedback()"]') &&
-    (document.querySelector('[onclick="schliesseFeedback()"]').textContent = t('btn_abbrechen'));
+  const feedbackAbbrechen = document.getElementById('feedback-abbrechen-btn');
+  if (feedbackAbbrechen) feedbackAbbrechen.textContent = t('btn_abbrechen');
   document.querySelector('[onclick="speichereFeedback()"]') &&
     (document.querySelector('[onclick="speichereFeedback()"]').textContent = t('btn_speichern'));
 
@@ -5640,6 +5642,11 @@ window.addEventListener('error', e => {
 window.addEventListener('unhandledrejection', e => {
   console.error('Innenpause Promise-Fehler:', e.reason);
   if (!APP_START_OK) zeigeStartFehler(e.reason?.message || String(e.reason));
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Escape') return;
+  if (document.getElementById('feedback-modal')?.classList.contains('open')) schliesseFeedback();
 });
 
 document.addEventListener('DOMContentLoaded', async function() {

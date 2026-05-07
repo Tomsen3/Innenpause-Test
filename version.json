@@ -1,7 +1,23 @@
 {
-    "appVersion":  "6.1.32",
+    "appVersion":  "6.1.34",
     "released":  "2026-05-07",
     "updates":  [
+                    {
+                        "version":  "6.1.34",
+                        "changelog":  [
+                                          "Feedback-Fenster fuer Heutige Uebungen mit Schliessen-Button ergaenzt",
+                                          "Feedback-Fenster kann mobil auch ueber den Hintergrund geschlossen werden",
+                                          "Unterer Abstand des Feedback-Fensters fuer Handy-Navigation verbessert"
+                                      ]
+                    },
+                    {
+                        "version":  "6.1.33",
+                        "changelog":  [
+                                          "Mobile Tagesimpuls-Karte nochmals deutlich flacher gesetzt",
+                                          "Nachgeladene Mobile-Header-Regeln fuer Stern, Schrift und Bild korrigiert",
+                                          "Bilduebergang im Tagesimpuls weicher verlaufen lassen"
+                                      ]
+                    },
                     {
                         "version":  "6.1.32",
                         "changelog":  [
