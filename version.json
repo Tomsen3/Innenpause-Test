@@ -1,7 +1,23 @@
 {
-    "appVersion":  "6.1.21",
+    "appVersion":  "6.1.23",
     "released":  "2026-05-07",
     "updates":  [
+                    {
+                        "version":  "6.1.23",
+                        "changelog":  [
+                                          "Doppelte mobile Header-Overrides aus der Haupt-CSS-Datei entfernt",
+                                          "Mobile Header-Korrektur in eigene nachgelagerte CSS-Datei ausgelagert",
+                                          "Alte Tagesimpuls-Bildreferenzen auf das neue Hintergrundbild umgestellt"
+                                      ]
+                    },
+                    {
+                        "version":  "6.1.22",
+                        "changelog":  [
+                                          "Mobile Reihenfolge von Klang und Hilfe fest verankert",
+                                          "Klang-Icon mobil als echten Kreis mit größerer Note korrigiert",
+                                          "Tagesimpuls-Hintergrundbild in der mobilen Karte erzwungen"
+                                      ]
+                    },
                     {
                         "version":  "6.1.21",
                         "changelog":  [

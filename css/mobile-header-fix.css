@@ -1,0 +1,170 @@
+@media (max-width: 700px) {
+  #impuls-header .header-tools {
+    display: grid !important;
+    grid-template-columns: 48px 48px !important;
+    grid-auto-flow: column !important;
+    flex: 0 0 105px !important;
+    width: 105px !important;
+    min-width: 105px !important;
+    justify-content: end !important;
+    align-items: start !important;
+    gap: 9px !important;
+  }
+
+  #impuls-header .header-tools #klang-toggle-btn {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    order: 1 !important;
+  }
+
+  #impuls-header .header-tools .hilfe-btn {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    order: 2 !important;
+  }
+
+  #impuls-header .header-tools #klang-toggle-btn,
+  #impuls-header .header-tools .hilfe-btn {
+    width: 48px !important;
+    min-width: 48px !important;
+    max-width: 48px !important;
+    min-height: 62px !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 5px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  #impuls-header .header-tools #klang-toggle-icon,
+  #impuls-header .header-tools .hilfe-icon {
+    box-sizing: border-box !important;
+    width: 46px !important;
+    min-width: 46px !important;
+    max-width: 46px !important;
+    height: 46px !important;
+    min-height: 46px !important;
+    max-height: 46px !important;
+    flex: 0 0 46px !important;
+    aspect-ratio: 1 / 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    border: 1px solid rgba(68, 84, 70, 0.16) !important;
+    background: rgba(255, 253, 247, 0.86) !important;
+    box-shadow: 0 9px 22px rgba(36, 49, 39, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.92) !important;
+    color: #496c55 !important;
+    font-family: Georgia, 'Times New Roman', serif !important;
+    font-size: 32px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    text-align: center !important;
+  }
+
+  #impuls-header .header-tools .hilfe-icon {
+    font-size: 30px !important;
+  }
+
+  #impuls-header .header-tools #klang-toggle-btn.active #klang-toggle-icon {
+    background: linear-gradient(180deg, rgba(232, 241, 226, 0.98), rgba(214, 229, 207, 0.98)) !important;
+    border-color: rgba(47, 106, 80, 0.34) !important;
+    color: #2f6a50 !important;
+  }
+
+  #impuls-header .header-tools #klang-toggle-label,
+  #impuls-header .header-tools .hilfe-btn > span:last-child {
+    display: block !important;
+    width: 48px !important;
+    max-width: 48px !important;
+    color: #1d352b !important;
+    font-family: 'Lora', Georgia, 'Times New Roman', serif !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    line-height: 1.05 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+  }
+
+  #impuls-header .impuls-card {
+    grid-template-columns: minmax(0, 1fr) 118px !important;
+    overflow: hidden !important;
+  }
+
+  #impuls-header .impuls-landscape {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 118px !important;
+    min-width: 118px !important;
+    min-height: calc(100% + 32px) !important;
+    align-self: stretch !important;
+    margin: -16px 0 -16px 0 !important;
+    border-radius: 0 18px 18px 0 !important;
+    clip-path: none !important;
+    background-color: #eef2ec !important;
+    background-image:
+      linear-gradient(90deg, rgba(255, 253, 247, 0.98) 0%, rgba(255, 253, 247, 0.68) 30%, rgba(255, 253, 247, 0.14) 62%, rgba(255, 253, 247, 0) 86%),
+      url("../Hintergrund.png") !important;
+    background-position: left center, center right !important;
+    background-size: 100% 100%, cover !important;
+    background-repeat: no-repeat, no-repeat !important;
+  }
+}
+
+@media (max-width: 380px) {
+  #impuls-header .header-tools {
+    grid-template-columns: 44px 44px !important;
+    flex-basis: 95px !important;
+    width: 95px !important;
+    min-width: 95px !important;
+    gap: 7px !important;
+  }
+
+  #impuls-header .header-tools #klang-toggle-btn,
+  #impuls-header .header-tools .hilfe-btn {
+    width: 44px !important;
+    min-width: 44px !important;
+    max-width: 44px !important;
+    min-height: 58px !important;
+  }
+
+  #impuls-header .header-tools #klang-toggle-icon,
+  #impuls-header .header-tools .hilfe-icon {
+    width: 42px !important;
+    min-width: 42px !important;
+    max-width: 42px !important;
+    height: 42px !important;
+    min-height: 42px !important;
+    max-height: 42px !important;
+    flex-basis: 42px !important;
+    font-size: 29px !important;
+  }
+
+  #impuls-header .header-tools .hilfe-icon {
+    font-size: 27px !important;
+  }
+
+  #impuls-header .header-tools #klang-toggle-label,
+  #impuls-header .header-tools .hilfe-btn > span:last-child {
+    width: 44px !important;
+    max-width: 44px !important;
+    font-size: 10px !important;
+  }
+
+  #impuls-header .impuls-card {
+    grid-template-columns: minmax(0, 1fr) 96px !important;
+  }
+
+  #impuls-header .impuls-landscape {
+    width: 96px !important;
+    min-width: 96px !important;
+  }
+}

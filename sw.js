@@ -1,18 +1,18 @@
 // sw.js - stabilisierte Version (v5.2)
 
-const CACHE_NAME = 'innenpause-v6-1-21';
+const CACHE_NAME = 'innenpause-v6-1-23';
 const CACHE_PREFIX = 'innenpause-';
 
 const SHELL = [
   './index.html',
   './manifest.json',
   './css/styles.css',
+  './css/mobile-header-fix.css',
   './js/sync-backup.js',
   './js/pdf-export.js',
   './version.json',
   './data/bausteine.json',
   './data/hilfe.json',
-  './assets/tagesimpuls-bg.png',
   './Hintergrund.png',
   './assets/innenpause-klang.mp3',
   './assets/meditationsfigur.svg',
