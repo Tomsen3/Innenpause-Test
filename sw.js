@@ -1,6 +1,6 @@
-// sw.js - stabilisierte Version (v5.2)
+// sw.js - stabilisierte Version (v6.2.0)
 
-const CACHE_NAME = 'innenpause-v6-1-38';
+const CACHE_NAME = 'innenpause-v6-2-0';
 const CACHE_PREFIX = 'innenpause-';
 
 const SHELL = [
@@ -13,6 +13,12 @@ const SHELL = [
   './version.json',
   './data/bausteine.json',
   './data/hilfe.json',
+
+  './fonts/CormorantGaramond-Variable.woff2',
+  './fonts/CormorantGaramond-Italic-Variable.woff2',
+  './fonts/SourceSans3-Variable.woff2',
+  './fonts/SourceSans3-Italic-Variable.woff2',
+
   './assets/hintergrund.png',
   './assets/innenpause-klang.mp3',
   './assets/meditationsfigur.svg',
@@ -68,7 +74,10 @@ self.addEventListener('fetch', event => {
   }
 
   // ausgelagerte App-Daten frisch laden, offline aus Cache
-  if (url.pathname.endsWith('/data/bausteine.json') || url.pathname.endsWith('/data/hilfe.json')) {
+  if (
+    url.pathname.endsWith('/data/bausteine.json') ||
+    url.pathname.endsWith('/data/hilfe.json')
+  ) {
     event.respondWith(
       fetch(event.request)
         .then(res => {

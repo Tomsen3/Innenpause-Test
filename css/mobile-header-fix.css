@@ -1,7 +1,7 @@
 :root {
-  --font-editorial: "Cormorant Garamond", "Lora", Georgia, "Times New Roman", serif;
-  --font-ui-soft: "Source Sans Pro", "Segoe UI", Arial, sans-serif;
-  --font-impuls: "Lora", "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-editorial: "Cormorant Garamond", serif;
+  --font-ui-soft: "Source Sans 3", sans-serif;
+  --font-impuls: "Cormorant Garamond", serif;
 }
 
 /* Final mobile impulse card tuning: flatter card, inline star, soft image blend. */
@@ -52,7 +52,7 @@
     padding: 0 !important;
     font-family: var(--font-editorial) !important;
     font-size: 0.76rem !important;
-    font-weight: 650 !important;
+    font-weight: 560 !important;
     line-height: 1.02 !important;
     color: #2f6a50 !important;
   }
@@ -359,7 +359,7 @@
     background: rgba(255, 253, 247, 0.84) !important;
     box-shadow: 0 8px 18px rgba(36, 49, 39, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.94) !important;
     color: #496c55 !important;
-    font-family: Georgia, "Times New Roman", serif !important;
+    font-family: var(--font-editorial) !important;
     font-size: clamp(1.45rem, 6.5vw, 1.95rem) !important;
     font-weight: 400 !important;
     line-height: 1 !important;
@@ -494,7 +494,7 @@
     display: block !important;
     background: none !important;
     color: #fffaf2 !important;
-    font-family: Georgia, "Times New Roman", serif !important;
+    font-family: var(--font-editorial) !important;
     font-size: clamp(1.24rem, 5.2vw, 1.5rem) !important;
     font-weight: 700 !important;
     line-height: 1 !important;
@@ -626,7 +626,7 @@
     padding: 0 !important;
     font-family: var(--font-editorial) !important;
     font-size: 0.76rem !important;
-    font-weight: 650 !important;
+    font-weight: 560 !important;
     line-height: 1.02 !important;
     color: #2f6a50 !important;
   }
@@ -687,5 +687,50 @@
 
   #impuls-header .impuls-kategorie {
     font-size: 0.52rem !important;
+  }
+}
+
+
+/* ============================================================
+   Final typography consolidation – local variable fonts
+   Keep this block at the very end.
+   ============================================================ */
+@media (max-width: 700px) {
+  #impuls-header #app-titel-anzeige {
+    font-family: var(--font-editorial) !important;
+    font-weight: 520 !important;
+  }
+
+  #impuls-header .header-greeting-main {
+    font-family: var(--font-ui-soft) !important;
+    font-weight: 430 !important;
+  }
+
+  #impuls-header .header-greeting-title {
+    font-family: var(--font-editorial) !important;
+    font-weight: 500 !important;
+  }
+
+  #impuls-header .impuls-label {
+    font-family: var(--font-editorial) !important;
+    font-weight: 560 !important;
+  }
+
+  #impuls-header .impuls-text {
+    font-family: var(--font-impuls) !important;
+    font-weight: 400 !important;
+  }
+
+  #impuls-header .impuls-kategorie,
+  #impuls-header .header-tools #klang-toggle-label,
+  #impuls-header .header-tools .hilfe-btn > span:last-child {
+    font-family: var(--font-ui-soft) !important;
+    font-weight: 500 !important;
+  }
+
+  #impuls-header .header-tools #klang-toggle-icon,
+  #impuls-header .header-tools .hilfe-icon,
+  #impuls-header .impuls-quote-mark::before {
+    font-family: var(--font-editorial) !important;
   }
 }

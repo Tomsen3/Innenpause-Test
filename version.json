@@ -1,7 +1,18 @@
 {
-    "appVersion":  "6.1.38",
-    "released":  "2026-05-07",
+  "appVersion": "6.2.0",
+  "released": "2026-05-07",
     "updates":  [
+                    {
+                        "version": "6.2.0",
+                        "changelog": [
+                                          "Typografie vollständig auf lokale Variable Fonts umgestellt",
+                                          "Cormorant Garamond und Source Sans 3 lokal eingebunden",
+                                          "Mobile Header-Typografie konsolidiert und bereinigt",
+                                          "Service-Worker-Cache für neue Schriftdateien erweitert",
+                                          "PWA-Caching für lokale Fonts stabilisiert"
+  ]
+},
+
                     {
                         "version":  "6.1.37",
                         "changelog":  [

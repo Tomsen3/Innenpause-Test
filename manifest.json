@@ -6,8 +6,9 @@
   "display": "standalone",
   "background_color": "#f5f0e8",
   "theme_color": "#2c2416",
-  "orientation": "any",
+  "orientation": "portrait",
   "lang": "de",
+
   "icons": [
     {
       "src": "icon-192.png",
@@ -27,6 +28,12 @@
       "type": "image/x-icon"
     }
   ],
-  "categories": ["health", "lifestyle"],
+
+  "categories": [
+    "health",
+    "lifestyle",
+    "wellness"
+  ],
+
   "screenshots": []
 }

@@ -7,20 +7,43 @@
    3. Klang-Ergänzungen
    4. finaler Header-/Heute-Override
    ============================================================ */
-
 @font-face {
-  font-family: 'Lora';
-  src: local('Georgia'), local('Times New Roman');
-  font-style: normal;
+    font-family: 'Cormorant Garamond';
+    src: url('../fonts/CormorantGaramond-Variable.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'DM Sans';
-    src: local('Segoe UI'), local('Helvetica Neue'), local('Arial');
+    font-family: 'Cormorant Garamond';
+    src: url('../fonts/CormorantGaramond-Italic-Variable.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans 3';
+    src: url('../fonts/SourceSans3-Variable.woff2') format('woff2');
+    font-weight: 200 900;
     font-style: normal;
-  }
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans 3';
+    src: url('../fonts/SourceSans3-Italic-Variable.woff2') format('woff2');
+    font-weight: 200 900;
+    font-style: italic;
+    font-display: swap;
+}
+
 
   :root {
+    --font-editorial: 'Cormorant Garamond', serif;
+    --font-ui-soft: 'Source Sans 3', sans-serif;
+    --font-impuls: 'Cormorant Garamond', serif;
     --bg: #f3f5f1;
     --bg2: #e8eee5;
     --bg3: #d7e0d5;
@@ -49,7 +72,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
@@ -85,7 +108,7 @@
     margin-bottom: 12px;
   }
   .lizenz-titel {
-    font-family: 'Lora', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
     font-weight: 500;
     color: var(--text);
@@ -110,7 +133,7 @@
     border: 2px solid var(--border);
     border-radius: 10px;
     padding: 12px 14px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 15px;
     color: var(--text);
     outline: none;
@@ -133,7 +156,7 @@
     border: none;
     border-radius: 10px;
     padding: 13px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
@@ -181,9 +204,9 @@
     overflow-wrap: anywhere;
   }
   .header-greeting-main {
-    font-family: 'Lora', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 470;
   }
   .header-greeting-date {
     font-size: 11px;
@@ -195,9 +218,9 @@
     gap: 5px;
   }
   #app-titel-anzeige {
-    font-family: 'Lora', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 510;
     color: #1f2a21;
   }
   #app-untertitel-anzeige {
@@ -217,7 +240,7 @@
     border-radius: 6px;
     color: #1f2a21;
     padding: 4px 8px;
-    font-family: 'Lora', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 15px;
     width: 100%;
     margin-bottom: 5px;
@@ -239,11 +262,11 @@
     text-transform: uppercase;
     color: #c57a3d;
     margin-bottom: 4px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-weight: 500;
   }
   .impuls-text {
-    font-family: 'Lora', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 16px;
     line-height: 1.5;
@@ -259,7 +282,7 @@
     border-radius: 999px;
     background: rgba(255,255,255,0.42);
     color: #2f3f31;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 12px;
     font-weight: 650;
     line-height: 1;
@@ -365,7 +388,7 @@
     border: none;
     background: none;
     color: var(--text2);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 13px;
     font-weight: 650;
     cursor: pointer;
@@ -400,7 +423,7 @@
     padding: 13px 16px;
     text-align: left;
     cursor: pointer;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
   }
   .mehr-row:last-child {
     border-bottom: 0;
@@ -469,7 +492,7 @@
     background: var(--bg2);
     color: var(--text2);
     padding: 8px 11px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 13px;
     cursor: pointer;
   }
@@ -484,7 +507,7 @@
   .halt-step-nr { display:block; font-size: 9px; letter-spacing: 0; text-transform: uppercase; font-weight: 700; }
   .halt-step-label { display:block; margin-top: 2px; }
   .halt-panel { padding: 2px 0 4px; }
-  .halt-title { font-family:'Lora', serif; font-size: 21px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .halt-title { font-family:'Cormorant Garamond', serif; font-size: 21px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
   .halt-note { margin: 12px 0; padding: 10px 12px; border-left: 4px solid var(--accent3); border-radius: 8px; background: rgba(143,166,122,0.14); color: var(--text2); font-size: 13px; line-height: 1.5; }
   .halt-note.warn { border-left-color: var(--warm); background: #fff4ec; }
   .halt-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 4px; }
@@ -529,7 +552,7 @@
     border-left: 4px solid var(--accent2);
   }
   .card-title {
-    font-family: 'Lora', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 15px;
     font-weight: 500;
     color: var(--text);
@@ -563,7 +586,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Lora', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 15px;
     font-weight: 500;
     user-select: none;
@@ -572,7 +595,7 @@
   .akkordeon-header:hover { background: var(--bg2); }
   .akkordeon-header .zeit-badge {
     font-size: 11px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-weight: 400;
     color: var(--text3);
     background: var(--bg2);
@@ -614,7 +637,7 @@
     box-shadow: 0 18px 46px rgba(31,42,33,0.20);
   }
   .uebung-jetzt-label { font-size: 10px; letter-spacing: 0; text-transform: uppercase; color: var(--accent2); font-weight: 700; margin-bottom: 8px; padding-left: 4px; }
-  .uebung-jetzt-titel { font-family: 'Lora', serif; font-size: 20px; font-weight: 600; color: var(--text); margin-bottom: 7px; line-height: 1.3; }
+  .uebung-jetzt-titel { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--text); margin-bottom: 7px; line-height: 1.3; }
   .uebung-jetzt-meta { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; font-size: 13px; color: var(--text2); }
   .uebung-jetzt-desc { font-size: 13px; color: var(--text2); line-height: 1.5; margin-bottom: 10px; }
 
@@ -682,7 +705,7 @@
     justify-content: space-between;
     padding: 10px 12px;
     margin: 16px 0 0;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 13px;
     cursor: pointer;
   }
@@ -769,7 +792,7 @@
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 10px 12px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 14px;
     color: var(--text);
     outline: none;
@@ -787,7 +810,7 @@
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 14px;
     font-weight: 500;
     transition: transform 0.12s var(--ease-soft), box-shadow 0.18s var(--ease-soft), background 0.18s var(--ease-soft), border-color 0.18s var(--ease-soft);
@@ -842,7 +865,7 @@
     background: var(--bg2);
     color: var(--text2);
     padding: 8px 12px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 13px;
     cursor: pointer;
   }
@@ -871,7 +894,7 @@
   }
   .uebung-card { background: var(--bg); border: 1px solid var(--border); border-left: 4px solid var(--accent2); border-radius: 10px; padding: 14px; margin: 8px 0; position: relative; transition: transform 0.18s var(--ease-soft), box-shadow 0.18s var(--ease-soft), background 0.18s var(--ease-soft); }
   .uebung-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(44,36,22,0.11); background: #fffaf3; }
-  .uebung-titel { font-family: 'Lora', serif; font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+  .uebung-titel { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 500; margin-bottom: 4px; }
   .uebung-meta { font-size: 12px; color: var(--text3); display: flex; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
   .uebung-desc { font-size: 14px; color: var(--text2); line-height: 1.5; }
   .uebung-actions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
@@ -893,7 +916,7 @@
     gap: 8px;
   }
   .begruessung-icon { font-size: 18px; }
-  .begruessung-text { font-family: 'Lora', serif; font-style: italic; }
+  .begruessung-text { font-family: 'Cormorant Garamond', serif; font-style: italic; }
 
   /* KATEGORIE-FARBEN */
   .badge-kat[data-kat="Atem"]                    { background: #dbeeff; color: #2a6496; }
@@ -949,7 +972,7 @@
 
   /* VERLAUF */
   .verlauf-nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--card); border-bottom: 1px solid var(--border); }
-  .verlauf-datum { font-family: 'Lora', serif; font-size: 15px; }
+  .verlauf-datum { font-family: 'Cormorant Garamond', serif; font-size: 15px; }
   .nav-arrow { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; cursor: pointer; font-size: 14px; }
   .nav-arrow:hover { background: var(--bg3); }
 
@@ -978,7 +1001,7 @@
     background: transparent;
     color: var(--text);
     padding: 14px 16px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     text-align: left;
     cursor: pointer;
   }
@@ -1039,7 +1062,7 @@
   .tagesfrage-toggle { font-size: 12px; color: var(--blue); cursor: pointer; margin-top: 8px; display: flex; align-items: center; gap: 4px; }
   .tagesfrage-bereich { display: none; margin-top: 10px; }
   .tagesfrage-bereich.open { display: block; }
-  .tagesfrage-text { font-family: 'Lora', serif; font-style: italic; font-size: 14px; color: var(--text2); margin-bottom: 8px; padding: 8px 12px; background: var(--bg2); border-radius: 8px; border-left: 3px solid var(--blue); }
+  .tagesfrage-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; color: var(--text2); margin-bottom: 8px; padding: 8px 12px; background: var(--bg2); border-radius: 8px; border-left: 3px solid var(--blue); }
 
   /* TOAST */
   #toast {
@@ -1070,7 +1093,7 @@
   .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(44,36,22,0.5); z-index: 300; align-items: flex-end; }
   .modal-overlay.open { display: flex; }
   .modal { background: var(--card); border-radius: 20px 20px 0 0; padding: 20px; width: 100%; max-width: 600px; margin: 0 auto; max-height: 85vh; overflow-y: auto; }
-  .modal-titel { font-family: 'Lora', serif; font-size: 17px; font-weight: 500; margin-bottom: 16px; }
+  .modal-titel { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 500; margin-bottom: 16px; }
   .modal-close-btn { position: absolute; right: 14px; top: 12px; width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 999px; background: rgba(45,99,62,0.10); color: var(--text); font-size: 24px; line-height: 1; cursor: pointer; }
   .modal-close-btn:active { transform: scale(0.96); }
   .feedback-modal-sheet { position: relative; padding-top: 22px; padding-bottom: max(20px, calc(18px + env(safe-area-inset-bottom))); }
@@ -1089,14 +1112,14 @@
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 8px 12px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 14px;
     color: var(--text);
     outline: none;
   }
 
   .section-label { font-size: 11px; letter-spacing: 0; text-transform: uppercase; color: var(--text3); font-weight: 500; padding: 16px 16px 4px; }
-  .empty-state { text-align: center; padding: 30px 20px; color: var(--text3); font-style: italic; font-family: 'Lora', serif; font-size: 14px; }
+  .empty-state { text-align: center; padding: 30px 20px; color: var(--text3); font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 14px; }
 
   .heute-einstieg-card {
     margin: 16px;
@@ -1107,7 +1130,7 @@
     box-shadow: 0 12px 34px rgba(44,36,22,0.09);
   }
   .heute-einstieg-title {
-    font-family: 'Lora', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 24px;
     font-weight: 500;
     color: var(--text);
@@ -1129,7 +1152,7 @@
     border: none;
     background: transparent;
     color: var(--text3);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 13px;
     cursor: pointer;
     text-align: center;
@@ -1147,7 +1170,7 @@
     animation: innenpauseFadeIn 0.2s var(--ease-soft);
   }
   .moment-auswahl-title {
-    font-family: 'Lora', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 17px;
     color: var(--text);
     text-align: center;
@@ -1160,7 +1183,7 @@
     border-radius: 8px;
     background: rgba(255,255,255,0.56);
     color: var(--text);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 14px;
     cursor: pointer;
     text-align: left;
@@ -1180,7 +1203,7 @@
     border: 0;
     background: transparent;
     color: var(--text3);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 13px;
     cursor: pointer;
     padding: 6px 10px;
@@ -1243,7 +1266,7 @@
   }
   .streak-feuer { font-size: 22px; }
   .streak-text { flex: 1; }
-  .streak-zahl { font-family: 'Lora', serif; font-size: 18px; font-weight: 500; color: var(--accent2); line-height: 1; }
+  .streak-zahl { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 500; color: var(--accent2); line-height: 1; }
   .streak-label { font-size: 11px; color: var(--text3); margin-top: 2px; }
   .streak-tage { display: flex; gap: 4px; }
   .streak-tag { width: 20px; height: 20px; border-radius: 50%; background: var(--bg3); font-size: 9px; display: flex; align-items: center; justify-content: center; }
@@ -1257,7 +1280,7 @@
   /* WOCHEN-CHART */
   .wochen-chart { margin: 0 16px; }
   .wochen-chart svg { width: 100%; display: block; }
-  .chart-label { font-size: 10px; fill: var(--text3); font-family: 'DM Sans', sans-serif; }
+  .chart-label { font-size: 10px; fill: var(--text3); font-family: 'Source Sans 3', sans-serif; }
   .chart-bar { transition: opacity 0.2s; }
   .chart-bar:hover { opacity: 0.75; }
 
@@ -1316,7 +1339,7 @@
   .startfehler-box strong {
     display: block;
     color: var(--text);
-    font-family: 'Lora', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 4px;
@@ -1345,9 +1368,9 @@
     from { transform: translateX(-50%) translateY(20px); opacity: 0; }
     to   { transform: translateX(-50%) translateY(0); opacity: 1; }
   }
-  .update-banner-titel { font-family: 'Lora', serif; font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+  .update-banner-titel { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 500; margin-bottom: 4px; }
   .update-banner-sub { font-size: 12px; opacity: 0.85; margin-bottom: 12px; line-height: 1.4; }
-  .update-banner-btn { display: inline-block; padding: 8px 16px; border-radius: 8px; border: none; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; margin-right: 8px; }
+  .update-banner-btn { display: inline-block; padding: 8px 16px; border-radius: 8px; border: none; font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; margin-right: 8px; }
   .update-btn-ja { background: #f5f0e8; color: #3a5a3a; }
   .update-btn-sp { background: rgba(255,255,255,0.15); color: #f5f0e8; }
 
@@ -1364,16 +1387,16 @@
   #hilfe-modal.open { display: flex; }
   .hilfe-container { background: var(--bg); flex: 1; overflow: hidden; display: flex; flex-direction: column; max-width: 600px; margin: 0 auto; width: 100%; margin-top: 40px; border-radius: 20px 20px 0 0; }
   .hilfe-header { background: #e6eee3; color: #1f2a21; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; border-radius: 20px 20px 0 0; border-bottom: 1px solid #cfdccf; }
-  .hilfe-header-titel { font-family: 'Lora', serif; font-size: 17px; }
+  .hilfe-header-titel { font-family: 'Cormorant Garamond', serif; font-size: 17px; }
   .hilfe-close { background: rgba(31,42,33,0.08); border: none; color: #1f2a21; border-radius: 8px; padding: 6px 12px; cursor: pointer; font-size: 14px; }
   .hilfe-nav { display: flex; flex-wrap: wrap; background: var(--card); border-bottom: 1px solid var(--border); scrollbar-width: none; }
   .hilfe-nav::-webkit-scrollbar { display: none; }
-  .hilfe-nav-btn { flex-shrink: 0; padding: 8px 12px; border: none; background: none; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; color: var(--text3); cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; }
+  .hilfe-nav-btn { flex-shrink: 0; padding: 8px 12px; border: none; background: none; font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-weight: 500; color: var(--text3); cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; }
   .hilfe-nav-btn.active { color: var(--accent); border-bottom-color: var(--accent2); }
   .hilfe-body { flex: 1; overflow-y: auto; padding: 16px; }
   .hilfe-sektion { display: none; }
   .hilfe-sektion.active { display: block; }
-  .hilfe-h2 { font-family: 'Lora', serif; font-size: 16px; font-weight: 500; color: var(--text); margin: 16px 0 8px; }
+  .hilfe-h2 { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 500; color: var(--text); margin: 16px 0 8px; }
   .hilfe-h2:first-child { margin-top: 0; }
   .hilfe-h3 { font-size: 13px; font-weight: 600; color: var(--accent); margin: 12px 0 4px; text-transform: uppercase; letter-spacing: 0; }
   .hilfe-p { font-size: 13px; color: var(--text2); line-height: 1.6; margin-bottom: 8px; }
@@ -1422,7 +1445,7 @@
     margin-bottom: 4px;
   }
   .naechster-schritt-title {
-    font-family: 'Lora', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 16px;
     color: var(--text);
     margin-bottom: 4px;
@@ -1493,13 +1516,13 @@
     margin: 8px 16px;
     padding: 18px 16px;
     color: var(--text2);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-style: normal;
     line-height: 1.5;
   }
   .empty-state strong {
     display: block;
-    font-family: 'Lora', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 15px;
     color: var(--text);
     font-weight: 500;
@@ -1533,7 +1556,7 @@
     box-shadow: var(--shadow);
     animation: innenpauseFadeIn 0.35s var(--ease-soft);
   }
-  .rueckkehr-title { font-family:'Lora',serif; font-size:16px; color:var(--text); margin-bottom:5px; }
+  .rueckkehr-title { font-family:'Cormorant Garamond',serif; font-size:16px; color:var(--text); margin-bottom:5px; }
   .rueckkehr-text { font-size:13px; color:var(--text2); line-height:1.55; margin-bottom:10px; }
   .vorschlaege-reduziert { display:none; }
   .vorschlaege-reduziert.offen { display:block; animation: innenpauseFadeIn 0.25s var(--ease-soft); }
@@ -1541,7 +1564,7 @@
   .insight-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:12px; box-shadow:var(--shadow); transition:transform .18s var(--ease-soft), box-shadow .18s var(--ease-soft); }
   .insight-card:hover { transform:translateY(-2px); box-shadow:0 8px 22px rgba(44,36,22,0.12); }
   .insight-label { font-size:10px; color:var(--text3); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px; }
-  .insight-value { font-family:'Lora',serif; font-size:18px; color:var(--text); line-height:1.2; }
+  .insight-value { font-family:'Cormorant Garamond',serif; font-size:18px; color:var(--text); line-height:1.2; }
   .insight-sub { font-size:11px; color:var(--text2); margin-top:4px; line-height:1.35; }
   .wochenfokus-card { margin:8px 16px 10px; background:rgba(143,166,122,0.12); border-left:4px solid var(--accent3); }
   @keyframes innenpauseFadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
@@ -1621,13 +1644,13 @@ body {
 .hilfe-btn::after { content: "Hilfe"; font-size: 15px; }
 .lang-btn { display: none !important; }
 .header-greeting { max-width: none !important; text-align: left !important; margin-bottom: 32px !important; }
-.header-greeting-main { font-family: 'DM Sans', sans-serif !important; font-size: 22px !important; font-weight: 500 !important; color: #526159 !important; }
-.header-greeting-title { display: block; margin-top: 2px; font-family: 'Lora', serif; font-size: 42px; font-weight: 700; line-height: 1.12; color: #173129; }
+.header-greeting-main { font-family: 'Source Sans 3', sans-serif !important; font-size: 22px !important; font-weight: 500 !important; color: #526159 !important; }
+.header-greeting-title { display: block; margin-top: 2px; font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; line-height: 1.12; color: #173129; }
 .header-greeting-date { margin-top: 8px !important; font-size: 22px !important; color: #7a817c !important; }
 .impuls-card { position: relative; min-height: 176px; display: grid; grid-template-columns: 74px minmax(0,1fr) 38%; align-items: center; gap: 12px; overflow: hidden; border-radius: 16px; background: linear-gradient(90deg, #f3f6eb 0%, #f7f5ea 56%, #e8efe4 100%); box-shadow: 0 12px 30px rgba(44,54,43,0.13); }
 .impuls-quote-mark { width: 58px; height: 58px; margin-left: 22px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; background: linear-gradient(145deg, #789a77, #496c53); color: #fffaf2; font-family: Georgia, serif; font-size: 48px; line-height: 1; }
 .impuls-label { margin: 0 0 10px !important; color: #2d633d !important; text-transform: none !important; font-size: 20px !important; font-weight: 800 !important; }
-.impuls-text { max-width: 33rem; font-family: 'DM Sans', sans-serif !important; font-style: normal !important; font-size: 19px !important; line-height: 1.55 !important; color: #1e2321 !important; }
+.impuls-text { max-width: 33rem; font-family: 'Source Sans 3', sans-serif !important; font-style: normal !important; font-size: 19px !important; line-height: 1.55 !important; color: #1e2321 !important; }
 .impuls-kategorie { margin-top: 18px !important; color: #687a69 !important; font-size: 15px !important; }
 .impuls-landscape { align-self: stretch; min-height: 176px; background: radial-gradient(circle at 48% 45%, rgba(255,231,178,0.72) 0 8px, transparent 24px), linear-gradient(145deg, transparent 0 38%, rgba(74,105,74,0.22) 39% 46%, transparent 47%), linear-gradient(135deg, transparent 0 18%, rgba(94,125,89,0.30) 19% 35%, transparent 36%), linear-gradient(180deg, rgba(227,236,221,0.20), rgba(96,130,96,0.26)), linear-gradient(160deg, #edf2e8, #c4d3be); clip-path: ellipse(84% 92% at 82% 50%); }
 #tab-bar { position: fixed !important; top: auto !important; left: 50%; bottom: 16px; width: min(680px, calc(100% - 32px)); transform: translateX(-50%); z-index: 120; padding: 8px; border: 0 !important; border-radius: 28px; background: rgba(255,255,255,0.88) !important; box-shadow: 0 12px 34px rgba(36,49,39,0.12); backdrop-filter: blur(14px); }
@@ -1636,9 +1659,9 @@ body {
 #main { width: min(100%, 944px) !important; max-width: 944px !important; padding: 0 52px 122px !important; }
 .heute-einstieg-card, .card, .tagesfortschritt-card, .streak-bar, .naechster-schritt-card, .uebung-jetzt-card { border: 1px solid rgba(49,70,55,0.09) !important; border-radius: 16px !important; background: rgba(255,255,255,0.82) !important; box-shadow: 0 10px 26px rgba(44,54,43,0.09) !important; }
 .heute-einstieg-card { margin: 36px 0 28px !important; padding: 28px 24px 30px !important; }
-.moment-card-main { width: 100%; display: grid; grid-template-columns: 68px minmax(0, 1fr) 26px; gap: 18px; align-items: center; border: 0; background: transparent; color: inherit; text-align: left; cursor: pointer; font-family: 'DM Sans', sans-serif; }
+.moment-card-main { width: 100%; display: grid; grid-template-columns: 68px minmax(0, 1fr) 26px; gap: 18px; align-items: center; border: 0; background: transparent; color: inherit; text-align: left; cursor: pointer; font-family: 'Source Sans 3', sans-serif; }
 .moment-card-icon, .moment-option span, .uebung-jetzt-card::after { width: 58px; height: 58px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; background: #eef3e8; color: #3e744e; font-size: 31px; }
-.heute-einstieg-title { display: block !important; font-family: 'DM Sans', sans-serif !important; font-size: 24px !important; font-weight: 800 !important; line-height: 1.2 !important; color: #2d633d !important; text-align: left !important; margin: 0 !important; }
+.heute-einstieg-title { display: block !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 24px !important; font-weight: 800 !important; line-height: 1.2 !important; color: #2d633d !important; text-align: left !important; margin: 0 !important; }
 .moment-card-sub { display: block; margin-top: 4px; color: #747b76; font-size: 18px; }
 .moment-card-arrow { color: #66716a; font-size: 48px; line-height: 1; }
 .moment-auswahl, .moment-auswahl.open { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px !important; margin-top: 30px !important; padding-top: 0 !important; border-top: 0 !important; }
@@ -1651,7 +1674,7 @@ body {
 .uebung-jetzt-card::before { display: none !important; }
 .uebung-jetzt-card::after { content: "≋"; position: absolute; left: 24px; top: 50%; transform: translateY(-50%); }
 .uebung-jetzt-label, .uebung-jetzt-meta, .uebung-jetzt-desc, .smart-hinweis { display: none !important; }
-.uebung-jetzt-titel { margin: 0 !important; font-family: 'DM Sans', sans-serif !important; font-size: 24px !important; font-weight: 800 !important; }
+.uebung-jetzt-titel { margin: 0 !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 24px !important; font-weight: 800 !important; }
 .uebung-jetzt-actions { display: flex !important; gap: 10px; margin: 0 !important; }
 .uebung-jetzt-actions .btn-secondary { display: none !important; }
 .btn-primary { border-radius: 18px !important; background: linear-gradient(180deg, #3a784f, #2d633e) !important; color: #fffaf3 !important; box-shadow: 0 7px 18px rgba(45,99,62,0.24) !important; }
@@ -1666,7 +1689,7 @@ body {
 .tagesfortschritt-fill, .streak-tage, .streak-info-btn { display: none !important; }
 .tagesfortschritt-count { color: #2d7647 !important; font-size: 20px !important; }
 .streak-feuer { width: 58px; height: 58px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; background: #f8e7df; font-size: 28px !important; }
-.streak-zahl { display: inline; color: #173129 !important; font-family: 'DM Sans', sans-serif !important; font-size: 34px !important; font-weight: 800 !important; }
+.streak-zahl { display: inline; color: #173129 !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 34px !important; font-weight: 800 !important; }
 .card-reflexion { margin: 0 0 22px !important; padding: 22px 24px !important; border-left: 0 !important; }
 #abschluss-card { display: none !important; }
 @media (max-width: 700px) {
@@ -2362,7 +2385,7 @@ body {
   border-radius: 16px !important;
   background: #edf2e9 !important;
   color: #315f3d !important;
-  font: 700 22px/1 'DM Sans', sans-serif !important;
+  font: 700 22px/1 'Source Sans 3', sans-serif !important;
 }
 
 #tab-bar {
@@ -2439,11 +2462,11 @@ body {
   .flow-box { width: 100%; max-width: 600px; margin: 0 auto; background: var(--card); border-radius: 22px 22px 0 0; box-shadow: 0 -10px 40px rgba(0,0,0,0.22); overflow: hidden; }
   .flow-header { background: linear-gradient(135deg, #2c2416 0%, #4a3c28 100%); color: #f5f0e8; padding: 17px 20px 14px; }
   .flow-label { font-size: 10px; letter-spacing: 0; text-transform: uppercase; color: var(--accent2); margin-bottom: 4px; font-weight: 700; }
-  .flow-title { font-family: 'Lora', serif; font-size: 19px; line-height: 1.3; }
+  .flow-title { font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.3; }
   .flow-body { padding: 18px 20px 20px; }
   .flow-progress { height: 7px; border-radius: 999px; background: var(--bg3); overflow: hidden; margin-bottom: 16px; }
   .flow-progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent3), var(--accent2)); transition: width 0.3s var(--ease-soft); }
-  .flow-step-title { font-family: 'Lora', serif; font-size: 17px; color: var(--text); margin-bottom: 8px; }
+  .flow-step-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--text); margin-bottom: 8px; }
   .flow-step-text { font-size: 14px; color: var(--text2); line-height: 1.65; margin-bottom: 12px; }
   .flow-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
   .flow-actions { display: grid; grid-template-columns: 1fr 1.4fr; gap: 8px; margin-top: 16px; }
@@ -2583,7 +2606,7 @@ body {
     padding-top: 14px;
   }
   .moment-auswahl-title {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 14px;
     font-weight: 650;
     color: var(--text2);
@@ -3546,13 +3569,13 @@ body {
 .hilfe-btn::after { content: "Hilfe"; font-size: 15px; }
 .lang-btn { display: none !important; }
 .header-greeting { max-width: none !important; text-align: left !important; margin-bottom: 32px !important; }
-.header-greeting-main { font-family: 'DM Sans', sans-serif !important; font-size: 22px !important; font-weight: 500 !important; color: #526159 !important; }
-.header-greeting-title { display: block; margin-top: 2px; font-family: 'Lora', serif; font-size: 42px; font-weight: 700; line-height: 1.12; color: #173129; }
+.header-greeting-main { font-family: 'Source Sans 3', sans-serif !important; font-size: 22px !important; font-weight: 500 !important; color: #526159 !important; }
+.header-greeting-title { display: block; margin-top: 2px; font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; line-height: 1.12; color: #173129; }
 .header-greeting-date { margin-top: 8px !important; font-size: 22px !important; color: #7a817c !important; }
 .impuls-card { position: relative; min-height: 176px; display: grid; grid-template-columns: 74px minmax(0,1fr) 38%; align-items: center; gap: 12px; overflow: hidden; border-radius: 16px; background: linear-gradient(90deg, #f3f6eb 0%, #f7f5ea 56%, #e8efe4 100%); box-shadow: 0 12px 30px rgba(44,54,43,0.13); }
 .impuls-quote-mark { width: 58px; height: 58px; margin-left: 22px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; background: linear-gradient(145deg, #789a77, #496c53); color: #fffaf2; font-family: Georgia, serif; font-size: 48px; line-height: 1; }
 .impuls-label { margin: 0 0 10px !important; color: #2d633d !important; text-transform: none !important; font-size: 20px !important; font-weight: 800 !important; }
-.impuls-text { max-width: 33rem; font-family: 'DM Sans', sans-serif !important; font-style: normal !important; font-size: 19px !important; line-height: 1.55 !important; color: #1e2321 !important; }
+.impuls-text { max-width: 33rem; font-family: 'Source Sans 3', sans-serif !important; font-style: normal !important; font-size: 19px !important; line-height: 1.55 !important; color: #1e2321 !important; }
 .impuls-kategorie { margin-top: 18px !important; color: #687a69 !important; font-size: 15px !important; }
 .impuls-landscape { align-self: stretch; min-height: 176px; background: radial-gradient(circle at 48% 45%, rgba(255,231,178,0.72) 0 8px, transparent 24px), linear-gradient(145deg, transparent 0 38%, rgba(74,105,74,0.22) 39% 46%, transparent 47%), linear-gradient(135deg, transparent 0 18%, rgba(94,125,89,0.30) 19% 35%, transparent 36%), linear-gradient(180deg, rgba(227,236,221,0.20), rgba(96,130,96,0.26)), linear-gradient(160deg, #edf2e8, #c4d3be); clip-path: ellipse(84% 92% at 82% 50%); }
 #tab-bar { position: fixed !important; top: auto !important; left: 50%; bottom: 16px; width: min(680px, calc(100% - 32px)); transform: translateX(-50%); z-index: 120; padding: 8px; border: 0 !important; border-radius: 28px; background: rgba(255,255,255,0.88) !important; box-shadow: 0 12px 34px rgba(36,49,39,0.12); backdrop-filter: blur(14px); }
@@ -3561,9 +3584,9 @@ body {
 #main { width: min(100%, 944px) !important; max-width: 944px !important; padding: 0 52px 122px !important; }
 .heute-einstieg-card, .card, .tagesfortschritt-card, .streak-bar, .naechster-schritt-card, .uebung-jetzt-card { border: 1px solid rgba(49,70,55,0.09) !important; border-radius: 16px !important; background: rgba(255,255,255,0.82) !important; box-shadow: 0 10px 26px rgba(44,54,43,0.09) !important; }
 .heute-einstieg-card { margin: 16px 0 24px !important; padding: 24px !important; }
-.moment-card-main { width: 100%; display: grid; grid-template-columns: 68px minmax(0, 1fr) 26px; gap: 18px; align-items: center; border: 0; background: transparent; color: inherit; text-align: left; cursor: pointer; font-family: 'DM Sans', sans-serif; }
+.moment-card-main { width: 100%; display: grid; grid-template-columns: 68px minmax(0, 1fr) 26px; gap: 18px; align-items: center; border: 0; background: transparent; color: inherit; text-align: left; cursor: pointer; font-family: 'Source Sans 3', sans-serif; }
 .moment-card-icon, .moment-option span, .uebung-jetzt-card::after { width: 58px; height: 58px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; background: #eef3e8; color: #3e744e; font-size: 31px; }
-.heute-einstieg-title { display: block !important; font-family: 'DM Sans', sans-serif !important; font-size: 24px !important; font-weight: 800 !important; line-height: 1.2 !important; color: #2d633d !important; text-align: left !important; margin: 0 !important; }
+.heute-einstieg-title { display: block !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 24px !important; font-weight: 800 !important; line-height: 1.2 !important; color: #2d633d !important; text-align: left !important; margin: 0 !important; }
 .moment-card-sub { display: block; margin-top: 4px; color: #747b76; font-size: 18px; }
 .moment-card-arrow { color: #66716a; font-size: 48px; line-height: 1; }
 .moment-auswahl, .moment-auswahl.open { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px !important; margin-top: 24px !important; padding-top: 0 !important; border-top: 0 !important; }
@@ -3576,7 +3599,7 @@ body {
 .uebung-jetzt-card::before { display: none !important; }
 .uebung-jetzt-card::after { content: "≋"; position: absolute; left: 24px; top: 50%; transform: translateY(-50%); }
 .uebung-jetzt-label, .uebung-jetzt-meta, .uebung-jetzt-desc, .smart-hinweis { display: none !important; }
-.uebung-jetzt-titel { margin: 0 !important; font-family: 'DM Sans', sans-serif !important; font-size: 24px !important; font-weight: 800 !important; }
+.uebung-jetzt-titel { margin: 0 !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 24px !important; font-weight: 800 !important; }
 .uebung-jetzt-actions { display: flex !important; gap: 10px; margin: 0 !important; }
 .uebung-jetzt-actions .btn-secondary { display: none !important; }
 .btn-primary { border-radius: 18px !important; background: linear-gradient(180deg, #3a784f, #2d633e) !important; color: #fffaf3 !important; box-shadow: 0 7px 18px rgba(45,99,62,0.24) !important; }
@@ -3591,7 +3614,7 @@ body {
 .tagesfortschritt-fill, .streak-tage, .streak-info-btn { display: none !important; }
 .tagesfortschritt-count { color: #2d7647 !important; font-size: 20px !important; }
 .streak-feuer { width: 58px; height: 58px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; background: #f8e7df; font-size: 28px !important; }
-.streak-zahl { display: inline; color: #173129 !important; font-family: 'DM Sans', sans-serif !important; font-size: 34px !important; font-weight: 800 !important; }
+.streak-zahl { display: inline; color: #173129 !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 34px !important; font-weight: 800 !important; }
 .card-reflexion { margin: 0 0 22px !important; padding: 22px 24px !important; border-left: 0 !important; }
 #abschluss-card { display: none !important; }
 @media (max-width: 700px) {
@@ -4229,7 +4252,7 @@ body {
 .lizenz-titel,
 .name-titel {
   margin: 0 0 8px !important;
-  font-family: 'Lora', Georgia, serif !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
   font-size: 34px !important;
   line-height: 1.08 !important;
   font-weight: 700 !important;
@@ -4263,7 +4286,7 @@ body {
   border-radius: 14px !important;
   background: #fbfcf7 !important;
   color: #172c24 !important;
-  font: 600 17px/1.2 'DM Sans', sans-serif !important;
+  font: 600 17px/1.2 'Source Sans 3', sans-serif !important;
   text-align: left !important;
   letter-spacing: 0 !important;
   outline: none !important;
@@ -4292,7 +4315,7 @@ body {
   border-radius: 18px !important;
   background: linear-gradient(180deg, #3a784f, #2d633e) !important;
   color: #fffaf3 !important;
-  font: 800 19px/1 'DM Sans', sans-serif !important;
+  font: 800 19px/1 'Source Sans 3', sans-serif !important;
   cursor: pointer !important;
   box-shadow: 0 9px 22px rgba(45,99,62,0.24) !important;
 }
@@ -6626,7 +6649,7 @@ body {
     content: attr(data-unit) !important;
     display: inline !important;
     margin-left: 4px !important;
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: 'Source Sans 3', sans-serif !important;
     font-size: 12px !important;
     font-weight: 700 !important;
   }
@@ -6828,7 +6851,7 @@ body {
   color: #2d633e;
   box-shadow: 0 7px 18px rgba(45, 61, 45, 0.08);
   cursor: pointer;
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 12px;
   font-weight: 750;
   line-height: 1.1;
@@ -7368,7 +7391,7 @@ body {
 
 #app-titel-anzeige {
   padding-top: clamp(10px, 2.5vw, 16px) !important;
-  font-family: 'Lora', Georgia, 'Times New Roman', serif !important;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif !important;
   font-size: clamp(25px, 5.8vw, 38px) !important;
   font-weight: 700 !important;
   line-height: 1 !important;
@@ -7410,7 +7433,7 @@ body {
   background: transparent !important;
   box-shadow: none !important;
   color: #415247 !important;
-  font-family: 'Lora', Georgia, serif !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
   font-size: clamp(12px, 3.3vw, 15px) !important;
   font-weight: 500 !important;
   line-height: 1.12 !important;
@@ -7478,7 +7501,7 @@ body {
   align-items: center !important;
   flex-wrap: nowrap !important;
   gap: 10px !important;
-  font-family: 'DM Sans', system-ui, sans-serif !important;
+  font-family: 'Source Sans 3', system-ui, sans-serif !important;
   font-size: clamp(15px, 4.1vw, 22px) !important;
   font-weight: 450 !important;
   line-height: 1.25 !important;
@@ -7513,7 +7536,7 @@ body {
 .header-greeting-title {
   display: block !important;
   margin-top: clamp(10px, 2.6vw, 16px) !important;
-  font-family: 'Lora', Georgia, 'Times New Roman', serif !important;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif !important;
   font-size: clamp(35px, 9.8vw, 62px) !important;
   font-weight: 700 !important;
   line-height: 1.08 !important;
@@ -7575,7 +7598,7 @@ body {
 
 .impuls-label {
   margin: 0 0 clamp(9px, 2.2vw, 16px) !important;
-  font-family: 'Lora', Georgia, 'Times New Roman', serif !important;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif !important;
   font-style: normal !important;
   font-size: clamp(18px, 4.8vw, 28px) !important;
   font-weight: 700 !important;
@@ -7588,7 +7611,7 @@ body {
   max-width: 34rem !important;
   max-height: none !important;
   overflow: visible !important;
-  font-family: 'Lora', Georgia, 'Times New Roman', serif !important;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif !important;
   font-style: italic !important;
   font-size: clamp(18px, 4.8vw, 28px) !important;
   font-weight: 400 !important;
@@ -7626,7 +7649,7 @@ body {
   background: rgba(255, 253, 247, 0.96) !important;
   color: #24402d !important;
   box-shadow: 0 20px 52px rgba(31, 41, 35, 0.18) !important;
-  font-family: 'Lora', Georgia, serif !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
   font-size: 16px !important;
   line-height: 1.35 !important;
   text-align: center !important;
@@ -7833,7 +7856,7 @@ body {
   box-shadow:
     0 24px 58px rgba(31, 41, 35, 0.18),
     inset 0 1px 0 rgba(255, 255, 255, 0.86) !important;
-  font-family: 'Lora', Georgia, 'Times New Roman', serif !important;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif !important;
   font-size: 17px !important;
   font-style: italic !important;
   line-height: 1.36 !important;
@@ -8012,7 +8035,7 @@ body {
 }
 
 .header-greeting-main {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   font-size: 22px;
   font-weight: 500;
   color: #526159;
@@ -8021,7 +8044,7 @@ body {
 .header-greeting-title {
   display: block;
   margin-top: 2px;
-  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: clamp(1.9rem, 5vw, 2.4rem);
   font-weight: 600;
   line-height: 1.08;
@@ -8073,7 +8096,7 @@ body {
 
 .impuls-text {
   max-width: 33rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   font-style: normal;
   font-size: 19px;
   line-height: 1.55;
@@ -8161,7 +8184,7 @@ body {
   color: inherit;
   text-align: left;
   cursor: pointer;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 .moment-card-icon,
@@ -8180,7 +8203,7 @@ body {
 
 .heute-einstieg-title {
   display: block;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   font-size: 24px;
   font-weight: 800;
   line-height: 1.2;
@@ -8280,7 +8303,7 @@ body {
 
 .uebung-jetzt-titel {
   margin: 0;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   font-size: 24px;
   font-weight: 800;
 }
@@ -8376,7 +8399,7 @@ body {
 .streak-zahl {
   display: inline;
   color: #173129;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   font-size: 34px;
   font-weight: 800;
 }
