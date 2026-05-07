@@ -1,7 +1,39 @@
 {
-    "appVersion":  "6.1.6",
-    "released":  "2026-05-06",
+    "appVersion":  "6.1.10",
+    "released":  "2026-05-07",
     "updates":  [
+                    {
+                        "version":  "6.1.10",
+                        "changelog":  [
+                                          "Atem-Pop-up der Klang-Erinnerung kompakter gestaltet",
+                                          "Text der Atem-Anweisung angepasst",
+                                          "Note im Pop-up-Kreis groesser dargestellt"
+                                      ]
+                    },
+                    {
+                        "version":  "6.1.9",
+                        "changelog":  [
+                                          "Hilfe um Klang-Erinnerung und eigene Klangdateien erweitert",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "6.1.8",
+                        "changelog":  [
+                                          "Eigene Klangdatei kann lokal ausgewaehlt und gespeichert werden",
+                                          "Eigener Klang wird aus IndexedDB geladen und kann wieder entfernt werden",
+                                          "Klang-Erinnerung faellt bei Bedarf auf den Standardklang zurueck"
+                                      ]
+                    },
+                    {
+                        "version":  "6.1.7",
+                        "changelog":  [
+                                          "Halt-finden-Schalter aus dem Header entfernt",
+                                          "Klang-Schalter an die ehemalige Halt-finden-Position gesetzt",
+                                          "Hilfe-Fragezeichen im Header kleiner abgestimmt",
+                                          "Backup-Erinnerung ueber der unteren Navigation klickbar gemacht"
+                                      ]
+                    },
                     {
                         "version":  "6.1.6",
                         "changelog":  [

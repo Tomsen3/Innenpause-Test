@@ -7445,7 +7445,16 @@ body {
 }
 
 .klang-settings-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-top: 10px;
+}
+
+.klang-status {
+  margin-top: 8px;
+  color: var(--accent);
+  font-weight: 650;
 }
 
 .klang-hinweis {
@@ -7535,9 +7544,9 @@ body {
 }
 
 .klang-atem-popup-box {
-  width: min(320px, calc(100vw - 48px));
-  padding: 24px 22px 20px;
-  border-radius: 18px;
+  width: min(276px, calc(100vw - 56px));
+  padding: 18px 18px 16px;
+  border-radius: 16px;
   background: rgba(255, 252, 244, 0.96);
   border: 1px solid rgba(45, 99, 62, 0.18);
   box-shadow: 0 18px 48px rgba(31, 41, 35, 0.20);
@@ -7546,27 +7555,27 @@ body {
 }
 
 .klang-atem-popup-icon {
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   border-radius: 999px;
   background: rgba(45, 99, 62, 0.10);
   color: #2d633e;
-  font-size: 25px;
+  font-size: 31px;
 }
 
 .klang-atem-popup-text {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.28;
   color: #24402d;
 }
 
 .klang-atem-popup-sub {
-  margin-top: 10px;
+  margin-top: 8px;
   font-size: 13px;
   color: var(--text2);
 }
@@ -7642,9 +7651,18 @@ body {
 }
 
 .header-tools .klang-toggle-btn {
-  grid-column: 2 !important;
-  grid-row: 2 !important;
+  grid-column: 1 !important;
+  grid-row: 1 !important;
   justify-self: center !important;
+}
+
+#sync-erinnerung {
+  z-index: 1100 !important;
+  padding-bottom: max(18px, env(safe-area-inset-bottom)) !important;
+}
+
+#sync-erinnerung > div {
+  margin-bottom: 0 !important;
 }
 
 @media (max-width: 700px) {
@@ -7691,6 +7709,7 @@ body {
 
   .header-tools {
     grid-template-columns: 48px 48px !important;
+    grid-template-rows: auto !important;
     gap: 4px 10px !important;
     min-width: 106px !important;
   }
@@ -7720,13 +7739,16 @@ body {
   }
 
   .header-tools .klang-toggle-btn {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
     width: 44px !important;
     min-width: 44px !important;
     max-width: 44px !important;
-    min-height: 38px !important;
+    min-height: 64px !important;
     padding: 4px 2px !important;
     border-radius: 14px !important;
     font-size: 9px !important;
+    align-self: start !important;
   }
 
   .header-tools #klang-toggle-icon {
@@ -7739,5 +7761,15 @@ body {
     max-width: 38px !important;
     white-space: normal !important;
     line-height: 1.05 !important;
+  }
+
+  .header-tools .hilfe-btn {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+
+  .header-tools .hilfe-btn::before {
+    font-size: 21px !important;
+    font-weight: 600 !important;
   }
 }
