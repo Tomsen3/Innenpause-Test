@@ -1,7 +1,15 @@
 {
-    "appVersion":  "6.1.30",
+    "appVersion":  "6.1.31",
     "released":  "2026-05-07",
     "updates":  [
+                    {
+                        "version":  "6.1.31",
+                        "changelog":  [
+                                          "Tagesimpuls mobil kleiner gesetzt und Stern direkt vor die Überschrift verschoben",
+                                          "Mobile Tagesimpuls-Karte schmaler und niedriger gemacht",
+                                          "Tagesimpuls-Bild mit neuer Cache-Version geladen"
+                                      ]
+                    },
                     {
                         "version":  "6.1.30",
                         "changelog":  [

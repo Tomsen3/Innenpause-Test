@@ -216,7 +216,7 @@
     border-radius: 0 18px 18px 0 !important;
     background-image:
       linear-gradient(90deg, rgba(255, 253, 247, 0.96) 0%, rgba(255, 253, 247, 0.58) 25%, rgba(255, 253, 247, 0.12) 52%, rgba(255, 253, 247, 0) 82%),
-      url("../Hintergrund.png") !important;
+      url("../assets/hintergrund.png") !important;
     background-position: left center, center center !important;
     background-size: 100% 100%, cover !important;
     background-repeat: no-repeat, no-repeat !important;
