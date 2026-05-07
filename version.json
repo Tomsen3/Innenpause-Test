@@ -1,7 +1,21 @@
 {
-    "appVersion":  "6.1.10",
+    "appVersion":  "6.1.12",
     "released":  "2026-05-07",
     "updates":  [
+                    {
+                        "version":  "6.1.12",
+                        "changelog":  [
+                                          "Note im Klang-Atem-Pop-up groesser dargestellt",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
+                    {
+                        "version":  "6.1.11",
+                        "changelog":  [
+                                          "Hilfe-Fragezeichen und Kreis im Header groesser an den Klangschalter angeglichen",
+                                          "Service-Worker-Cache auf neue App-Version aktualisiert"
+                                      ]
+                    },
                     {
                         "version":  "6.1.10",
                         "changelog":  [

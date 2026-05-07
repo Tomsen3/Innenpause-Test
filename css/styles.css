@@ -7555,8 +7555,8 @@ body {
 }
 
 .klang-atem-popup-icon {
-  width: 46px;
-  height: 46px;
+  width: 52px;
+  height: 52px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -7564,7 +7564,8 @@ body {
   border-radius: 999px;
   background: rgba(45, 99, 62, 0.10);
   color: #2d633e;
-  font-size: 31px;
+  font-size: 40px;
+  font-weight: 800;
 }
 
 .klang-atem-popup-text {
@@ -7708,25 +7709,25 @@ body {
   }
 
   .header-tools {
-    grid-template-columns: 48px 48px !important;
+    grid-template-columns: 52px 52px !important;
     grid-template-rows: auto !important;
-    gap: 4px 10px !important;
-    min-width: 106px !important;
+    gap: 4px 8px !important;
+    min-width: 112px !important;
   }
 
   .header-halt-btn,
   .hilfe-btn {
-    width: 48px !important;
-    min-height: 64px !important;
+    width: 52px !important;
+    min-height: 72px !important;
     gap: 5px !important;
-    font-size: 11px !important;
+    font-size: 12px !important;
   }
 
   .header-tool-icon,
   .hilfe-btn::before {
-    width: 42px !important;
-    height: 42px !important;
-    font-size: 23px !important;
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 30px !important;
   }
 
   .header-halt-icon-img {
@@ -7735,7 +7736,7 @@ body {
   }
 
   .hilfe-btn::after {
-    font-size: 11px !important;
+    font-size: 12px !important;
   }
 
   .header-tools .klang-toggle-btn {
@@ -7769,7 +7770,7 @@ body {
   }
 
   .header-tools .hilfe-btn::before {
-    font-size: 21px !important;
+    font-size: 30px !important;
     font-weight: 600 !important;
   }
 }
